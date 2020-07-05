@@ -1,0 +1,26 @@
+{
+  "name": "news-explorer-frontend",
+  "version": "0.0.1",
+  "description": "News explorer application frontend",
+  "main": "index.js",
+  "scripts": {
+    "start": "NODE_ENV=prodaction rimraf dist && webpack --mode production",
+    "dev": "NODE_ENV=development webpack-dev-server --mode development --open --watch",
+    "deploy": "NODE_ENV=prodaction gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YaVladislav/news-explorer-frontend.git"
+  },
+  "author": "VladislavV",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YaVladislav/news-explorer-frontend/issues"
+  },
+  "homepage": "https://github.com/YaVladislav/news-explorer-frontend#readme",
+  "devDependencies": {
+    "eslint": "^7.0.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.2"
+  }
+}
