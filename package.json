@@ -1,7 +1,7 @@
 {
   "name": "news-explorer-frontend",
   "homepage": "https://yavladislav.github.io/news-explorer-frontend/",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "News explorer application frontend",
   "main": "index.js",
   "scripts": {
