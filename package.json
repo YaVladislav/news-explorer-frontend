@@ -1,10 +1,11 @@
 {
   "name": "news-explorer-frontend",
+  "homepage": "https://yavladislav.github.io/news-explorer-frontend/",
   "version": "0.0.1",
   "description": "News explorer application frontend",
   "main": "index.js",
   "scripts": {
-    "start": "NODE_ENV=prodaction rimraf dist && webpack --mode production",
+    "build": "NODE_ENV=prodaction rimraf dist && webpack --mode production",
     "dev": "NODE_ENV=development webpack-dev-server --mode development --open --watch",
     "deploy": "NODE_ENV=prodaction gh-pages -d dist"
   },
@@ -17,10 +18,34 @@
   "bugs": {
     "url": "https://github.com/YaVladislav/news-explorer-frontend/issues"
   },
-  "homepage": "https://github.com/YaVladislav/news-explorer-frontend#readme",
   "devDependencies": {
-    "eslint": "^7.0.0",
-    "eslint-config-airbnb-base": "^14.1.0",
-    "eslint-plugin-import": "^2.20.2"
+    "@babel/cli": "7.10.4",
+    "@babel/core": "7.10.4",
+    "@babel/preset-env": "7.10.4",
+    "autoprefixer": "9.8.4",
+    "babel-loader": "8.1.0",
+    "css-loader": "3.6.0",
+    "cssnano": "4.1.10",
+    "eslint": "7.0.0",
+    "eslint-config-airbnb-base": "14.1.0",
+    "eslint-plugin-import": "2.20.2",
+    "file-loader": "6.0.0",
+    "gh-pages": "3.1.0",
+    "html-loader": "1.1.0",
+    "html-webpack-plugin": "4.3.0",
+    "image-webpack-loader": "6.0.0",
+    "mini-css-extract-plugin": "0.9.0",
+    "optimize-css-assets-webpack-plugin": "5.0.3",
+    "path": "0.12.7",
+    "postcss-loader": "3.0.0",
+    "style-loader": "1.2.1",
+    "webpack": "4.43.0",
+    "webpack-cli": "3.3.12",
+    "webpack-dev-server": "3.11.0",
+    "webpack-md5-hash": "0.0.6"
+  },
+  "dependencies": {
+    "babel-polyfill": "6.26.0",
+    "core-js": "3.6.5"
   }
 }
