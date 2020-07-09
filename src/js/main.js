@@ -1,3 +1,2 @@
 import '../pages/index.css';
-
-console.log(1);
+import 'normalize.css';

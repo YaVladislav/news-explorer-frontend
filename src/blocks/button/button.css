@@ -1,0 +1,13 @@
+@import url('./__text/__text.css');
+
+.button {
+  height: 48px;
+  border: 1px solid #FFF;
+  box-sizing: border-box;
+  border-radius: 100px;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  margin-left: 32px;
+  padding: 0;
+}

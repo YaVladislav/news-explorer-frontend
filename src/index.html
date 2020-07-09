@@ -1,13 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Главная</title>
 </head>
 <body>
-  <h1>Главная</h1>
-  <a href="index.html">Главная</a>
-  <a href="my-news.html">Мои новости</a>
+  <div class="page">
+    <!--HEADER-->
+    <header class="header">
+      <h1 class="header__logo">NewsExplorer</h1>
+      <nav class="header__navigation">
+        <ul class="menu">
+          <li class="menu__item menu__item_active">
+            <a class="link" href="./index.html">Главная</a>
+          </li>
+          <li class="menu__item">
+            <a class="link" href="./articles.html">Сохраненные статьи</a>
+          </li>
+        </ul>
+        <button class="button">
+           <span class="button__text">Авторизоваться</span>
+        </button >
+      </nav>
+    </header>
+    <!--MAIN-->
+    <main class="content">
+      <section class="search">
+
+      </section>
+    </main>
+    <!--FOOTER-->
+    <footer class="footer">
+
+    </footer>
+  </div>
 </body>
 </html>

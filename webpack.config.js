@@ -12,11 +12,11 @@ const isDev = process.env.NODE_ENV === 'development';
 module.exports = {
   entry: {
     main: './src/js/main.js',
-    myNews: './src/js/news.js',
+    articles: './src/js/articles.js',
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name].[chunkhash].js',
+    filename: 'js/[name].[chunkhash].js',
   },
 
   module: {
@@ -77,7 +77,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: isDev ? '[name].css' : 'styles/[name].[hash].css',
+      filename: 'styles/[name].[hash].css',
     }),
     new OptimizeCssAssetsPlugin({
       assetNameRegExp: /\.css$/g,
@@ -98,9 +98,9 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       inject: true,
-      template: './src/my-news.html',
-      filename: 'my-news.html',
-      chunks: ['myNews'],
+      template: './src/articles.html',
+      filename: 'articles.html',
+      chunks: ['articles'],
       minify: {
         collapseWhitespace: true,
       },
