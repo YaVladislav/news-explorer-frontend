@@ -1,4 +1,5 @@
 @import url('./__text/__text.css');
+@import url('./__image/__image.css');
 
 .button {
   height: 48px;
