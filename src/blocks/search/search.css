@@ -1,4 +1,15 @@
+@import url('./__title/__title.css');
+@import url('./__subtitle/__subtitle.css');
+@import url('./__form/__form.css');
+@import url('./__input/__input.css');
+@import url('./__button/__button.css');
+
 .search {
   height: 576px;
   background: no-repeat center url('../../images/georgia-de-lotz--UsJoNxLaNo-unsplash.jpg');
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  padding: 0 416px;
 }
