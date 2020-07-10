@@ -1,6 +1,6 @@
 @import url('./_active/_active.css');
 
-.menu__item {
+.navigation__item {
   display: flex;
   align-items: center;
   margin-left: 34px;

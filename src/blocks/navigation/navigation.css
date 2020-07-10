@@ -1,10 +1,8 @@
+@import url('./__menu/__menu.css');
 @import url('./__item/__item.css');
 
-.menu {
-  height: 100%;
+.navigation {
   display: flex;
   align-items: center;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  align-self: stretch;
 }

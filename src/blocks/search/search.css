@@ -6,7 +6,7 @@
 
 .search {
   height: 576px;
-  background: no-repeat center url('../../images/georgia-de-lotz--UsJoNxLaNo-unsplash.jpg');
+  background: no-repeat center url('../../images/search/cover.jpg');
   display: flex;
   flex-direction: column;
   align-items: center;

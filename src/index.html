@@ -10,12 +10,12 @@
     <!--HEADER-->
     <header class="header">
       <h1 class="header__logo">NewsExplorer</h1>
-      <nav class="header__navigation">
-        <ul class="menu">
-          <li class="menu__item menu__item_active">
+      <nav class="navigation">
+        <ul class="navigation__menu">
+          <li class="navigation__item navigation__item_active">
             <a class="link" href="./index.html">Главная</a>
           </li>
-          <li class="menu__item">
+          <li class="navigation__item">
             <a class="link" href="./articles.html">Сохраненные статьи</a>
           </li>
         </ul>
@@ -35,8 +35,9 @@
           <button class="search__button" type="submit">Искать</button>
         </form>
       </section>
+      <!--SECTION ABOUT-->
       <section class="about">
-        <img class="about__avatar" alt="Аватар" src="<%= require('./images/image-03.jpg')%>">
+        <img class="about__avatar" alt="Аватар" src="<%= require('./images/about/__avatar/avatar.jpg')%>">
         <div class="about__container">
           <h2 class="content__title">Об авторе</h2>
           <p class="about__author">
@@ -50,7 +51,21 @@
     </main>
     <!--FOOTER-->
     <footer class="footer">
-
+      <address class="footer__copyright">&copy; 2020 Supersite, Powered by News API</address>
+      <nav class="navigation">
+        <ul class="navigation__menu">
+          <li class="navigation__item">
+            <a class="link link_dark" href="./index.html">Главная</a>
+          </li>
+          <li class="navigation__item">
+            <a class="link link_dark" href="https://praktikum.yandex.ru">Яндекс.Практикум</a>
+          </li>
+        </ul>
+        <div class="footer__social">
+          <img class="footer__social-icon" alt="GH" src="<%= require('./images/footer/__social/GH.svg')%>">
+          <img class="footer__social-icon" alt="FB" src="<%= require('./images/footer/__social/FB.svg')%>">
+        </div>
+      </nav>
     </footer>
   </div>
 </body>
