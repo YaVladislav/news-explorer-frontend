@@ -10,6 +10,7 @@
 @import url('../blocks/navigation/navigation.css');
 @import url('../blocks/link/link.css');
 @import url('../blocks/link/_dark/_dark.css');
+@import url('../blocks/link/_social/_social.css');
 @import url('../blocks/button/button.css');
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
