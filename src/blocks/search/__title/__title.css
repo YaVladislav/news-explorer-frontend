@@ -1,4 +1,5 @@
 .search__title {
+  max-width: 608px;
   font-family: Roboto Slab;
   font-style: normal;
   font-weight: normal;

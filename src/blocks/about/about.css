@@ -1,0 +1,9 @@
+@import url('./__container/__container.css');
+@import url('./__avatar/__avatar.css');
+@import url('./__author/__author.css');
+
+.about {
+  display: flex;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}

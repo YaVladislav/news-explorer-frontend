@@ -1,6 +1,6 @@
 .search__button {
   width: 168px;
-  height: 64px;
+  height: 100%;
   font-family: Roboto;
   font-style: normal;
   font-weight: 500;
@@ -13,4 +13,6 @@
   border: none;
   color: #fff;
   padding: 0;
+  position: absolute;
+  right: 0;
 }

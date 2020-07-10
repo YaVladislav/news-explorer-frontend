@@ -1,0 +1,7 @@
+.about__avatar {
+  width: 464px;
+  height: 464px;
+  object-fit: cover;
+  margin-left: 104px;
+  border-radius: 1000px;
+}
