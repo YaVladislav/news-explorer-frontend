@@ -1,4 +1,5 @@
 .navigation__item_active {
-  border-bottom: 3px solid #FFF;
+  border-bottom: 3px solid;
+  background-color: inherit;
   box-sizing: border-box;
 }

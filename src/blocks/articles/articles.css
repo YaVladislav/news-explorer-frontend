@@ -1,7 +1,7 @@
 @import url('./__grid/__grid.css');
-@import url('./__button/__button.css');
 
 .articles {
   padding: 0 104px;
   margin: 80px 0;
+  color: #1A1B22;
 }
