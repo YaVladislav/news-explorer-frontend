@@ -2,13 +2,8 @@
 @import url('./__image/__image.css');
 
 .button {
-  height: 48px;
-  border: 1px solid #FFF;
-  box-sizing: border-box;
+  border: none;
   border-radius: 100px;
-  background-color: transparent;
   display: flex;
   align-items: center;
-  margin-left: 32px;
-  padding: 0;
 }

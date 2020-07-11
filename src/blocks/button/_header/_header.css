@@ -1,0 +1,8 @@
+.button_header {
+  height: 48px;
+  border: 1px solid #FFF;
+  box-sizing: border-box;
+  background-color: transparent;
+  margin-left: 32px;
+  padding: 0 12px;
+}

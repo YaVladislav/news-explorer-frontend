@@ -1,0 +1,9 @@
+.article__text {
+  flex-grow: 1;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  margin: 0 24px 10px;
+}

@@ -1,0 +1,20 @@
+@import url('./__image/__image.css');
+@import url('./__data/__data.css');
+@import url('./__title/__title.css');
+@import url('./__text/__text.css');
+@import url('./__source/__source.css');
+@import url('./__icon/__icon.css');
+
+.article {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #1A1B22;
+  border-radius: 16px;
+  position: relative;
+  background: #fff;
+}
+
+.article:hover {
+  box-shadow: 0 32px 58px 0 rgba(8, 29, 45, 0.1);
+}

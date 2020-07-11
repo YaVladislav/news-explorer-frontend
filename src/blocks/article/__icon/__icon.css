@@ -1,0 +1,23 @@
+.article__icon {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 40px;
+  height: 40px;
+  background: url('../../../images/article/__icon/icon.svg') center no-repeat #fff;
+  border-radius: 8px;
+  border: none;
+  padding: 0;
+}
+
+.article__icon:hover {
+  background: url('../../../images/article/__icon/icon_bold.svg') center no-repeat #fff;
+}
+
+.article__icon_marked {
+  background: url('../../../images/article/__icon/icom_marked.svg') center no-repeat #fff;
+}
+
+.article__icon_marked:hover {
+  background: url('../../../images/article/__icon/icom_marked.svg') center no-repeat #fff;
+}

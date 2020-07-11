@@ -19,8 +19,8 @@
             <a class="link" href="./articles.html">Сохраненные статьи</a>
           </li>
         </ul>
-        <button class="button">
-           <span class="button__text">Авторизоваться</span>
+        <button class="button button_header">
+           <span class="button__text button__text_white">Авторизоваться</span>
            <img class="button__image" alt="Выход" src="<%= require('./images/header/__icon/logout.svg')%>">
         </button >
       </nav>
@@ -33,8 +33,47 @@
         <h3 class="search__subtitle">Находите самые свежие статьи на любую тему и сохраняйте в своём личном кабинете.</h3>
         <form class="search__form">
           <input class="search__input" type="text" placeholder="Введите тему новости" name="search">
-          <button class="search__button" type="submit">Искать</button>
+          <button class="button button_search" type="submit">
+            <span class="button__text button__text_white">Искать</span>
+          </button>
         </form>
+      </section>
+      <!--SECTION ARTICLES-->
+      <section class="articles">
+        <h2 class="content__title">Результаты поиска</h2>
+        <div class="articles__grid">
+          <!--ARTICLE-->
+          <div class="article">
+            <img alt="Изображение статьи" class="article__image" src="<%= require('./images/article/__images/image_08.jpg')%>">
+            <time class="article__data" datetime="">2 августа, 2019</time>
+            <h3 class="article__title">Национальное достояние – парки</h3>
+            <p class="article__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
+            <span class="article__source">Лента.ру</span>
+            <button class="article__icon"></button>
+          </div>
+          <!--ARTICLE-->
+          <div class="article">
+            <img alt="Изображение статьи" class="article__image" src="<%= require('./images/article/__images/image_04.jpg')%>">
+            <time class="article__data" datetime="">2 августа, 2019</time>
+            <h3 class="article__title">Лесные огоньки: история одной фотографии</h3>
+            <p class="article__text">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного
+              из местных чудес природы.</p>
+            <span class="article__source">Медуза</span>
+            <button class="article__icon article__icon_marked"></button>
+          </div>
+          <!--ARTICLE-->
+          <div class="article">
+            <img alt="Изображение статьи" class="article__image" src="<%= require('./images/article/__images/image_07.jpg')%>">
+            <time class="article__data" datetime="">2 августа, 2019</time>
+            <h3 class="article__title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h3>
+            <p class="article__text">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
+            <span class="article__source">Риа</span>
+            <button class="article__icon"></button>
+          </div>
+        </div>
+        <button class="button button_result">
+          <span class="button__text button__text_dark">Показать еще</span>
+        </button>
       </section>
       <!--SECTION ABOUT-->
       <section class="about">
