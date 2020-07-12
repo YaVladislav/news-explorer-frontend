@@ -6,3 +6,11 @@
   text-decoration: none;
   color: inherit;
 }
+
+.link_social {
+  margin-right: 30px;
+  }
+
+  .link_social:last-child {
+    margin: 0;
+  }

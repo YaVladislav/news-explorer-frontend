@@ -31,11 +31,18 @@ module.exports = {
       {
         test: /\.css$/i,
         use: [
-          (isDev ? 'style-loader' : MiniCssExtractPlugin.loader),
+          (isDev
+            ? 'style-loader'
+            : {
+              loader: MiniCssExtractPlugin.loader,
+              options: {
+                publicPath: '../',
+              },
+            }
+          ),
           'css-loader',
           'postcss-loader',
         ],
-
       },
       {
         test: /\.(png|jpg|gif|ico|svg)$/,

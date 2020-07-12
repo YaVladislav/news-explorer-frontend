@@ -8,6 +8,7 @@
   border-radius: 8px;
   border: none;
   padding: 0;
+  cursor: pointer;
 }
 
 .article__icon:hover {
@@ -15,9 +16,9 @@
 }
 
 .article__icon_marked {
-  background: url('../../../images/article/__icon/icom_marked.svg') center no-repeat #fff;
+  background: url('../../../images/article/__icon/icon_marked.svg') center no-repeat #fff;
 }
 
 .article__icon_marked:hover {
-  background: url('../../../images/article/__icon/icom_marked.svg') center no-repeat #fff;
+  background: url('../../../images/article/__icon/icon_marked.svg') center no-repeat #fff;
 }

@@ -1,8 +1,12 @@
-@import url('./_active/_active.css');
-
 .navigation__item {
   display: flex;
   align-items: center;
   margin-left: 34px;
   height: 100%;
+}
+
+.navigation__item_active {
+  border-bottom: 3px solid;
+  background-color: inherit;
+  box-sizing: border-box;
 }
