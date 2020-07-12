@@ -5,11 +5,15 @@
   font-weight: normal;
   font-size: 16px;
   line-height: 22px;
-  color: #B6BCBF;
   margin: 0;
   padding-left: 24px;
   padding-right: 168px;
   border: 1px solid #D1D2D6;
   box-sizing: border-box;
   border-radius: 100px;
+  color: #1A1B22;
+}
+
+.search__input::placeholder {
+  color: #B6BCBF;
 }
