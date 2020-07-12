@@ -1,4 +1,5 @@
 .article__data {
+  display: inline-block;
   font-family: Source Sans Pro;
   font-style: normal;
   font-weight: normal;

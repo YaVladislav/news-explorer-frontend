@@ -13,15 +13,15 @@
       <nav class="navigation">
         <ul class="navigation__menu">
           <li class="navigation__item navigation__item_active">
-            <a class="link" href="./index.html">Главная</a>
+            <a class="link link_medium" href="./index.html">Главная</a>
           </li>
           <li class="navigation__item">
-            <a class="link" href="./articles.html">Сохраненные статьи</a>
+            <a class="link link_medium" href="./articles.html">Сохраненные статьи</a>
           </li>
         </ul>
-        <button class="button button_header">
+        <button class="button header__button">
           <span class="button__text">Авторизоваться</span>
-          <svg class="button__image" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <svg class="button__image" width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path d="M10 6L6 6L6 18H10V20H6C4.89543 20 4 19.1046 4 18V6C4 4.89543 4.89543 4 6 4H10V6ZM17.5856 13L13.2927 17.1339L14.707 18.4958L21.4141 12.0371L14.707 5.57837L13.2927 6.9402L17.5856 11.0741H8V13H17.5856Z" />
           </svg>
         </button >
@@ -35,7 +35,7 @@
         <h3 class="search__subtitle">Находите самые свежие статьи на любую тему и сохраняйте в своём личном кабинете.</h3>
         <form class="search__form">
           <input class="search__input" type="text" placeholder="Введите тему новости" name="search">
-          <button class="button button_search" type="submit">
+          <button class="button search__button" type="submit">
             <span class="button__text">Искать</span>
           </button>
         </form>
@@ -73,7 +73,7 @@
             <button class="article__icon"></button>
           </div>
         </div>
-        <button class="button button_result">
+        <button class="button articles__button">
           <span class="button__text">Показать еще</span>
         </button>
       </section>
@@ -113,6 +113,29 @@
         </div>
       </nav>
     </footer>
+    <!--POPUP-->
+    <div class="popup">
+      <div class="popup__content">
+        <img class="popup__close" src="<%= require('./images/popup/close.svg')%>" alt="">
+        <h3 class="popup__title">Вход</h3>
+        <form class="popup__form" name="new">
+          <div class="popup__input-field">
+            <label class="popup__label-input">
+              Email
+              <input class="popup__input" type="email" name="email" placeholder="Введите email">
+            </label>
+            <p class="popup__error popup__error_active">Неправильный формат email</p>
+          </div>
+          <div class="popup__input-field">
+            <label class="popup__label-input">
+              Пароль
+              <input class="popup__input" type="password" name="password" placeholder="Введите пароль">
+            </label>
+          </div>
+          <button type class="button popup__button">Войти</button>
+        </form>
+      </div>
+    </div>
   </div>
 </body>
 </html>

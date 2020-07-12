@@ -1,5 +1,10 @@
 @import url('../blocks/page/page.css');
 
+@import url('../blocks/navigation/navigation.css');
+@import url('../blocks/article/article.css');
+@import url('../blocks/link/link.css');
+@import url('../blocks/button/button.css');
+
 @import url('../blocks/header/header.css');
 @import url('../blocks/content/content.css');
 @import url('../blocks/footer/footer.css');
@@ -8,13 +13,53 @@
 @import url('../blocks/articles/articles.css');
 @import url('../blocks/about/about.css');
 
-@import url('../blocks/navigation/navigation.css');
-@import url('../blocks/article/article.css');
-@import url('../blocks/link/link.css');
-@import url('../blocks/button/button.css');
+@import url('../blocks/popup/popup.css');
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap');
-html {
-  font-family: 'Roboto', 'Roboto Slab', sans-serif;
+@font-face {
+  font-family: Inter;
+  src: url(../vendor/fonts/inter-regular.woff) format("woff");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(../vendor/fonts/roboto-regular.woff) format("woff");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(../vendor/fonts/roboto-medium.woff) format("woff");
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(../vendor/fonts/roboto-black.woff) format("woff");
+  font-style: normal;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: Roboto Slab;
+  src: url(../vendor/fonts/robotoslab-regular.woff) format("woff");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: Roboto Slab;
+  src: url(../vendor/fonts/robotoslab-bold.woff) format("woff");
+  font-style: normal;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: Source Sans Pro;
+  src: url(../vendor/fonts/sourcesanspro-regular.woff) format("woff");
+  font-style: normal;
+  font-weight: normal;
 }

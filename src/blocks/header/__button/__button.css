@@ -1,0 +1,9 @@
+.header__button {
+  height: 48px;
+  border: 1px solid;
+  border-color: inherit;
+  box-sizing: border-box;
+  background-color: transparent;
+  margin-left: 32px;
+  padding: 0 12px;
+}

@@ -1,0 +1,10 @@
+.articles__button {
+  height: 64px;
+  padding: 0 84px;
+  border-radius: 80px;
+  margin: 0 auto;
+}
+
+.articles__button:hover {
+  opacity: 0.9;
+}

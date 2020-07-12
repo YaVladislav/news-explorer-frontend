@@ -1,4 +1,5 @@
 .content__title {
+  max-width: 530px;
   font-family: Roboto Slab;
   font-style: normal;
   font-weight: normal;
