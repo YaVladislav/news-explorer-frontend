@@ -9,4 +9,5 @@
   color: inherit;
   cursor: pointer;
   transition: .1s linear;
+  padding: 0;
 }

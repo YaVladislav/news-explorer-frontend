@@ -4,11 +4,12 @@
 @import url(./__form/popup__form.css);
 @import url(./__input/popup__input.css);
 @import url(./__input-field/__input-field.css);
-@import url(./__label-input/__label-input.css);
+@import url(./__label/__label.css);
 @import url(./__button/popup__button.css);
 @import url(./_is-opened/popup_is-opened.css);
 @import url(./__error/popup__error.css);
-
+@import url(./__checkout-text/__checkout-text.css);
+@import url(./__checkout/__checkout.css);
 
 .popup {
   position: fixed;

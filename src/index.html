@@ -113,26 +113,32 @@
         </div>
       </nav>
     </footer>
-    <!--POPUP-->
-    <div class="popup">
+    <!--POPUP  модификатор класса _is-opened делает попап видимым-->
+    <div class="popup popup_is-opened">
       <div class="popup__content">
         <img class="popup__close" src="<%= require('./images/popup/close.svg')%>" alt="">
         <h3 class="popup__title">Вход</h3>
         <form class="popup__form" name="new">
           <div class="popup__input-field">
-            <label class="popup__label-input">
+            <label class="popup__label">
               Email
-              <input class="popup__input" type="email" name="email" placeholder="Введите email">
+              <input class="popup__input" type="email" name="email" min="2" placeholder="Введите email" required>
             </label>
             <p class="popup__error popup__error_active">Неправильный формат email</p>
           </div>
           <div class="popup__input-field">
-            <label class="popup__label-input">
+            <label class="popup__label">
               Пароль
-              <input class="popup__input" type="password" name="password" placeholder="Введите пароль">
+              <input class="popup__input" type="password" name="password" min="8" placeholder="Введите пароль" required>
             </label>
           </div>
-          <button type class="button popup__button">Войти</button>
+          <button type="submit" class="button popup__button">
+            <p class="button__text">Войти</p>
+          </button>
+          <p class="popup__checkout-text">
+            или
+            <button class="popup__checkout">Зарегистрироваться</button>
+          </p>
         </form>
       </div>
     </div>
