@@ -2,10 +2,13 @@ const path = require('path');
 const webpack = require('webpack');
 
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackMd5Hash = require('webpack-md5-hash');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const cssnano = require('cssnano');
+
+const { basename } = require('path');
 
 const isDev = process.env.NODE_ENV === 'development';
 
@@ -111,6 +114,10 @@ module.exports = {
       minify: {
         collapseWhitespace: true,
       },
+    }),
+    new FaviconsWebpackPlugin({
+      logo: './src/logo.svg',
+      inject: (htmlPlugin) => basename(htmlPlugin.options.filename) === 'index.html',
     }),
     new webpack.DefinePlugin({
       NODE_ENV: JSON.stringify(process.env.NODE_ENV),
