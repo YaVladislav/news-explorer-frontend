@@ -117,7 +117,8 @@ module.exports = {
     }),
     new FaviconsWebpackPlugin({
       logo: './src/logo.svg',
-      inject: (htmlPlugin) => basename(htmlPlugin.options.filename) === 'index.html',
+      prefix: 'favicon/',
+      inject: (htmlPlugin) => basename(htmlPlugin.options.filename),
     }),
     new webpack.DefinePlugin({
       NODE_ENV: JSON.stringify(process.env.NODE_ENV),
