@@ -5,9 +5,9 @@
   "description": "News explorer application frontend",
   "main": "index.js",
   "scripts": {
-    "build": "NODE_ENV=prodaction rimraf dist && webpack --mode production",
-    "dev": "NODE_ENV=development webpack-dev-server --mode development --open --watch",
-    "deploy": "NODE_ENV=prodaction gh-pages -d dist"
+    "build": "rimraf dist && webpack --config webpack.prod.js",
+    "dev": "webpack-dev-server --open --watch --config webpack.dev.js",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -43,7 +43,8 @@
     "webpack": "4.43.0",
     "webpack-cli": "3.3.12",
     "webpack-dev-server": "3.11.0",
-    "webpack-md5-hash": "0.0.6"
+    "webpack-md5-hash": "0.0.6",
+    "webpack-merge": "5.0.9"
   },
   "dependencies": {
     "babel-polyfill": "6.26.0",

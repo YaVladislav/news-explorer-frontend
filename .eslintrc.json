@@ -12,11 +12,12 @@
         "ecmaVersion": 11,
         "sourceType": "module"
     },
-    "ignorePatterns": [".gitignore"],
+    "ignorePatterns": [".gitignore", "dist"],
     "rules": {
       "no-underscore-dangle": "off",
       "no-console": "off",
       "consistent-return": "off",
-      "func-names": "off"
+      "func-names": "off",
+      "import/no-extraneous-dependencies": "off"
     }
 }
