@@ -3,9 +3,9 @@
   "name": "news-explorer-frontend",
   "description": "News explorer application frontend",
   "icons": {
-    "60": "/static/firefox_app_60x60.png",
-    "128": "/static/firefox_app_128x128.png",
-    "512": "/static/firefox_app_512x512.png"
+    "60": "/favicon/firefox_app_60x60.png",
+    "128": "/favicon/firefox_app_128x128.png",
+    "512": "/favicon/firefox_app_512x512.png"
   },
   "developer": {
     "name": "VladislavV",
