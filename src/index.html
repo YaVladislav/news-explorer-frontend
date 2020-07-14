@@ -110,7 +110,10 @@
       </section>
       <!--SECTION ABOUT-->
       <section class="about">
-        <img class="about__avatar" src="<%= require('./images/about/__avatar/avatar.jpg')%>" alt="avatar">
+        <picture class="about__avatar">
+          <source srcset="<%= require('./images/about/__avatar/avatar-small.jpg')%>" media="(max-width: 960px)">
+          <img src="<%= require('./images/about/__avatar/avatar.jpg')%>" alt="avatar">
+        </picture>
         <div class="about__container">
           <h2 class="content__title">Об авторе</h2>
           <p class="about__author">
