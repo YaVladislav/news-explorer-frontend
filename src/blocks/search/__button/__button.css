@@ -8,8 +8,10 @@
 }
 
 .search__button:hover {
+  transition: .1s linear;
   background: #347EFF;
 }
 .search__button:focus {
+  transition: .1s linear;
   background: #2A65CC;
 }

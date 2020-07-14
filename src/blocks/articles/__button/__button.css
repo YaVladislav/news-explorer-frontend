@@ -6,5 +6,6 @@
 }
 
 .articles__button:hover {
-  opacity: 0.9;
+  transition: 0.2s linear;
+  opacity: 0.8;
 }

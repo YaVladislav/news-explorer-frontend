@@ -42,6 +42,17 @@
           </button>
         </form>
       </section>
+      <!--SECTION PRELOADER (модификатор класса _active делает preloader видимым)-->
+      <section class="preloader">
+        <i class="preloader__circle"></i>
+        <p class="preloader__text">Идет поиск новостей...</p>
+      </section>
+      <!--SECTION PRELOADER-RESULT (модификатор класса _active делает preloader видимым)-->
+      <section class="preloader">
+        <img class="preloader__image" alt="Ничего не найдено" src="<%= require('./images/preloader/not-found.svg')%>">
+        <h3 class="preloader__title">Ничего не найдено</h3>
+        <p class="preloader__text">К сожалению по вашему запросу ничего не найдено.</p>
+      </section>
       <!--SECTION ARTICLES-->
       <section class="articles">
         <h2 class="content__title">Результаты поиска</h2>
@@ -115,7 +126,7 @@
         </div>
       </nav>
     </footer>
-    <!--POPUP  SIGNIN модификатор класса _is-opened делает попап видимым-->
+    <!--POPUP SIGNIN модификатор класса _is-opened делает попап видимым-->
     <div class="popup">
       <div class="popup__content">
         <img class="popup__close" src="<%= require('./images/popup/close.svg')%>" alt="">
@@ -145,7 +156,7 @@
         </form>
       </div>
     </div>
-    <!--POPUP  SIGNUP модификатор класса _is-opened делает попап видимым-->
+    <!--POPUP SIGNUP модификатор класса _is-opened делает попап видимым-->
     <div class="popup">
       <div class="popup__content">
         <img class="popup__close" src="<%= require('./images/popup/close.svg')%>" alt="">
