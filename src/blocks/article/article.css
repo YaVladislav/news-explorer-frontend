@@ -3,7 +3,10 @@
 @import url('./__title/__title.css');
 @import url('./__text/__text.css');
 @import url('./__source/__source.css');
+@import url('./__button/__button.css');
 @import url('./__icon/__icon.css');
+@import url('./__key/__key.css');
+@import url('./__keys/__keys.css');
 
 .article {
   display: flex;

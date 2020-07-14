@@ -1,0 +1,31 @@
+.article__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  border-radius: 8px;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  background: #fff;
+  stroke: #B6BCBF;
+}
+
+.article__button_flag:hover {
+  transition: .1s linear;
+  stroke: #1A1B22;
+}
+
+.article__button_trash {
+  stroke: none;
+  fill: #B6BCBF;
+}
+
+.article__button_trash:hover {
+  transition: .1s linear;
+  fill: #1A1B22;
+}

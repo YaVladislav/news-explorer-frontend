@@ -1,24 +1,10 @@
 .article__icon {
-  position: absolute;
-  top: 24px;
-  right: 24px;
-  width: 40px;
-  height: 40px;
-  background: url('../../../images/article/__icon/icon.svg') center no-repeat #fff;
-  border-radius: 8px;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-}
-
-.article__icon:hover {
-  background: url('../../../images/article/__icon/icon_bold.svg') center no-repeat #fff;
+  stroke: inherit;
+  stroke-width: 2;
 }
 
 .article__icon_marked {
-  background: url('../../../images/article/__icon/icon_marked.svg') center no-repeat #fff;
+  fill: #2F71E5;
+  stroke: none;
 }
 
-.article__icon_marked:hover {
-  background: url('../../../images/article/__icon/icon_marked.svg') center no-repeat #fff;
-}
