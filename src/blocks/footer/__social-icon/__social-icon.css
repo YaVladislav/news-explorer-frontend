@@ -7,3 +7,9 @@
 .footer__social-icon:last-child {
   margin: 0;
 }
+
+@media screen and (max-width: 960px) {
+  .footer__social-icon {
+    margin-right: 26px;
+  }
+}

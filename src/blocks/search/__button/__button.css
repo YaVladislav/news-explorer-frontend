@@ -15,3 +15,10 @@
   transition: .1s linear;
   background: #2A65CC;
 }
+
+@media screen and (max-width: 420px) {
+  .search__button {
+    position: relative;
+    height: 56px;
+  }
+}

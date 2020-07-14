@@ -7,3 +7,15 @@
   padding: 0 104px;
   color: #1A1B22;
 }
+
+@media screen and (max-width: 960px) {
+  .articles {
+    padding: 0 40px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .articles {
+    padding: 0 16px;
+  }
+}

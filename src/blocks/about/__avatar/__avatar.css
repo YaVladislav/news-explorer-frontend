@@ -4,3 +4,10 @@
   object-fit: cover;
   border-radius: 1000px;
 }
+
+@media screen and (max-width: 960px) {
+  .about__avatar {
+    width: 232px;
+    height: 232px;
+  }
+}

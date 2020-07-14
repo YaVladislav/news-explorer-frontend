@@ -6,3 +6,18 @@
   align-items: center;
   align-self: stretch;
 }
+
+
+@media screen and (max-width: 760px) {
+  .navigation_footer {
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 730px) {
+  .navigation_header {
+    display: none;
+  }
+}
