@@ -1,3 +1,9 @@
 .articles__keys {
   margin: 30px 0 56px;
 }
+
+@media screen and (max-width: 768px) {
+  .articles__keys {
+    margin: 16px 0 32px;
+  }
+}

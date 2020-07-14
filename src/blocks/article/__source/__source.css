@@ -9,3 +9,9 @@
   color: #B6BCBF;
   margin: 0 24px 24px;
 }
+
+@media screen and (max-width: 960px) {
+  .article__source {
+    margin: 0 16px 16px;
+  }
+}
