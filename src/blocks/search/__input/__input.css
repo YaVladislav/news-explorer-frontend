@@ -17,3 +17,9 @@
 .search__input::placeholder {
   color: #B6BCBF;
 }
+
+.search__input:invalid {
+  border: 1px solid #D1D2D6;
+  box-sizing: border-box;
+  box-shadow: none;
+}
