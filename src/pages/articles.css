@@ -11,51 +11,5 @@
 
 @import url('../blocks/articles/articles.css');
 
-@font-face {
-  font-family: Inter;
-  src: url(../vendor/fonts/inter-regular.woff) format("woff");
-  font-style: normal;
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: Roboto;
-  src: url(../vendor/fonts/roboto-regular.woff) format("woff");
-  font-style: normal;
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: Roboto;
-  src: url(../vendor/fonts/roboto-medium.woff) format("woff");
-  font-style: normal;
-  font-weight: 500;
-}
-
-@font-face {
-  font-family: Roboto;
-  src: url(../vendor/fonts/roboto-black.woff) format("woff");
-  font-style: normal;
-  font-weight: bold;
-}
-
-@font-face {
-  font-family: Roboto Slab;
-  src: url(../vendor/fonts/robotoslab-regular.woff) format("woff");
-  font-style: normal;
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: Roboto Slab;
-  src: url(../vendor/fonts/robotoslab-bold.woff) format("woff");
-  font-style: normal;
-  font-weight: bold;
-}
-
-@font-face {
-  font-family: Source Sans Pro;
-  src: url(../vendor/fonts/sourcesanspro-regular.woff) format("woff");
-  font-style: normal;
-  font-weight: normal;
-}
+/* FONTS */
+@import url('../vendor/fonts/fonts.css');
