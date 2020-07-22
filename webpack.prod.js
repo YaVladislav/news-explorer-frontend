@@ -31,7 +31,10 @@ module.exports = merge(common, {
     }),
     new FaviconsWebpackPlugin({
       logo: './src/logo.svg',
+      publicPath: './',
       prefix: 'favicon/',
+      cache: true,
+      mode: 'light',
       inject: (htmlPlugin) => basename(htmlPlugin.options.filename),
     }),
   ],
