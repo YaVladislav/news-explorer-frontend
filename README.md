@@ -1,5 +1,5 @@
 # Проект News-explorer
-##### Актуальная версия 0.0.2
+##### Актуальная версия 0.0.3
 
 ### [Cсылка](https://yavladislav.github.io/news-explorer-frontend/) на Github pages.
 
