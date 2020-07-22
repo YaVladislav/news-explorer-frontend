@@ -1,0 +1,18 @@
+@import url('./__image/__image.css');
+
+.button {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: inherit;
+  margin: 0 auto;
+  border: none;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  color: inherit;
+  cursor: pointer;
+  padding: 0;
+}

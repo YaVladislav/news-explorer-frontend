@@ -1,0 +1,17 @@
+.button__image {
+  display: none;
+  width: 24px;
+  height: 24px;
+  fill: #fff ;
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  margin-left: 12px;
+}
+
+.button__image_dark {
+  fill: #1A1B22;
+}
+
+.button__image_active {
+  display: block;
+}

@@ -1,0 +1,16 @@
+@import url('./__circle/__circle.css');
+@import url('./__title/__title.css');
+@import url('./__text/__text.css');
+@import url('./__image/__image.css');
+
+.preloader {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+	margin: 80px 0;
+	background-color: #fff;
+}
+
+.preloader_active {
+  display: flex;
+}

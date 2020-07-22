@@ -1,0 +1,15 @@
+.footer__social-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 30px;
+}
+
+.footer__social-icon:last-child {
+  margin: 0;
+}
+
+@media screen and (max-width: 960px) {
+  .footer__social-icon {
+    margin-right: 26px;
+  }
+}

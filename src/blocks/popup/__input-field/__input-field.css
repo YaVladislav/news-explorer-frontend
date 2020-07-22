@@ -1,0 +1,8 @@
+.popup__input-field {
+  min-height: 74px;
+  margin-bottom: 16px;
+}
+
+.popup__input-field:last-of-type {
+  margin-bottom: 0;
+}

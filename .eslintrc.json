@@ -1,0 +1,23 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true
+    },
+    "extends": "airbnb-base",
+    "globals": {
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly"
+    },
+    "parserOptions": {
+        "ecmaVersion": 11,
+        "sourceType": "module"
+    },
+    "ignorePatterns": [".gitignore", "dist"],
+    "rules": {
+      "no-underscore-dangle": "off",
+      "no-console": "off",
+      "consistent-return": "off",
+      "func-names": "off",
+      "import/no-extraneous-dependencies": "off"
+    }
+}

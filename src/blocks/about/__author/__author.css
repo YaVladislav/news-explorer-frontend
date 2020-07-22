@@ -1,0 +1,14 @@
+.about__author {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  margin: 24px 0 0 0;
+}
+
+@media screen and (max-width: 960px) {
+  .about__author {
+    margin: 16px 0 0 0;
+  }
+}

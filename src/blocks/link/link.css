@@ -1,0 +1,21 @@
+.link {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.link_medium {
+  font-weight: 500;
+}
+
+.link_social {
+  margin-right: 30px;
+  }
+
+.link_social:last-child {
+  margin: 0;
+}

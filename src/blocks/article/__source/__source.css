@@ -1,0 +1,17 @@
+.article__source {
+  font-family: Roboto Slab, serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  color: #B6BCBF;
+  margin: 0 24px 24px;
+}
+
+@media screen and (max-width: 960px) {
+  .article__source {
+    margin: 0 16px 16px;
+  }
+}

@@ -1,0 +1,18 @@
+.article__keys {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  height: 40px;
+  padding: 0 12px;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .article__keys {
+    top: 8px;
+    left: 8px;
+  }
+}

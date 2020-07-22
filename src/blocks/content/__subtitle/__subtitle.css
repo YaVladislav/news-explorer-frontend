@@ -1,0 +1,14 @@
+.content__subtitle {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  margin: 0;
+}
+
+@media screen and (max-width: 960px) {
+  .content__subtitle {
+    font-size: 14px;
+  }
+}

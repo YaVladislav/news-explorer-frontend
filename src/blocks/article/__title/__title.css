@@ -1,0 +1,16 @@
+.article__title {
+  font-family: Roboto Slab, serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 26px;
+  line-height: 30px;
+  margin: 0 24px 16px;
+}
+
+@media screen and (max-width: 960px) {
+  .article__title {
+    font-size: 22px;
+    line-height: 24px;
+    margin: 0 16px 10px;
+  }
+}

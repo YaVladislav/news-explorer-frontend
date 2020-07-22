@@ -1,0 +1,20 @@
+.header__button {
+  height: 48px;
+  border: 1px solid;
+  border-color: inherit;
+  box-sizing: border-box;
+  background-color: transparent;
+  padding: 0 12px;
+}
+
+.header__button:hover {
+  transition: .1s linear;
+  opacity: 0.8;
+}
+
+@media screen and (max-width: 730px) {
+  .header__button {
+    width: calc(100vw - 16px * 2);
+    margin-left: 0;
+  }
+}

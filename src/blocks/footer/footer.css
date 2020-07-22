@@ -1,0 +1,37 @@
+@import url('./__copyright/__copyright.css');
+@import url('./__social/__social.css');
+@import url('./__social-icon/__social-icon.css');
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  padding: 0 104px;
+  color: #1A1B22;
+}
+
+@media screen and (max-width: 960px) {
+  .footer {
+    padding: 0 40px;
+    height: 64px;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .footer {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .footer {
+    height: auto;
+  }
+}
+@media screen and (max-width: 320px) {
+  .footer {
+    padding: 0 16px;
+  }
+}

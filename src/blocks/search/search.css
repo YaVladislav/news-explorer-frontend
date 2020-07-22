@@ -1,0 +1,32 @@
+@import url('./__title/__title.css');
+@import url('./__subtitle/__subtitle.css');
+@import url('./__form/__form.css');
+@import url('./__input/__input.css');
+@import url('./__button/__button.css');
+
+.search {
+  max-width: 100%;
+  background: no-repeat center url('../../images/search/cover.jpg');
+  background-size: auto 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  margin-top: -80px;
+  margin-bottom: 80px;
+}
+
+@media screen and (max-width: 960px) {
+  .search {
+    margin-bottom: 40px;
+    margin-top: -66px;
+    padding: 0 40px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .search {
+    margin-top: -56px;
+    padding: 0 16px;
+  }
+}

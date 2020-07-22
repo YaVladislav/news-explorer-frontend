@@ -1,0 +1,18 @@
+.header__menu {
+  display: none;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.header__menu:focus {
+  border: none;
+  box-shadow: none;
+}
+
+@media screen and (max-width: 730px) {
+  .header__menu {
+    display: block;
+  }
+}

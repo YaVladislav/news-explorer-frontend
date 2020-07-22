@@ -1,0 +1,16 @@
+.popup__checkout-text {
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  margin: 16px auto 28px;
+  text-align: center;
+}
+
+.popup__checkout-text_success {
+  text-align: left;
+  margin: 16px 0 34px;
+  font-size: 18px;
+  line-height: 22px;
+}

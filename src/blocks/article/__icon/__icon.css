@@ -1,0 +1,10 @@
+.article__icon {
+  stroke: inherit;
+  stroke-width: 2;
+}
+
+.article__icon_marked {
+  fill: #2F71E5;
+  stroke: none;
+}
+

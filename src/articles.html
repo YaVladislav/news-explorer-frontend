@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Личный кабинет, в котором можно просмотреть сохраненные статьи">
+  <meta name="author" content="Vladislav Voronov">
+  <title>Сохраненные статьи</title>
+</head>
+<body>
+  <div class="page">
+    <!--HEADER-->
+    <header class="header header_dark">
+      <h1 class="header__logo">NewsExplorer</h1>
+      <button class="header__menu">
+        <img class="header__menu-icon" src="<%= require('./images/menu/menu_dark.svg')%>" alt="Menu">
+      </button>
+      <nav class="navigation navigation_header">
+        <ul class="navigation__menu">
+          <li class="navigation__item">
+            <a class="link" href="./index.html">Главная</a>
+          </li>
+          <li class="navigation__item navigation__item_active">
+            <a class="link" href="./articles.html">Сохраненные статьи</a>
+          </li>
+          <li class="navigation__item">
+            <button class="button header__button">
+              Грета
+              <svg class="button__image button__image_dark button__image_active" width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 6L6 6L6 18H10V20H6C4.89543 20 4 19.1046 4 18V6C4 4.89543 4.89543 4 6 4H10V6ZM17.5856 13L13.2927 17.1339L14.707 18.4958L21.4141 12.0371L14.707 5.57837L13.2927 6.9402L17.5856 11.0741H8V13H17.5856Z" />
+              </svg>
+            </button >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!--MAIN-->
+    <main class="content">
+      <!--SECTION ARTICLES-->
+      <!--В 3 части диплома планируется подгрузка спрайтов SVG через JS-->
+      <section class="articles">
+        <h2 class="page__title">Сохранённые статьи</h2>
+        <h3 class="content__title">Грета, у вас 5 сохранённых статей</h3>
+        <div class="articles__keys">
+          <p class="content__subtitle">
+            По ключевым словам:
+            <span class="articles__key">Природа, Тайга</span>
+            и
+            <span class="articles__key">2 другим</span>
+          </p>
+        </div>
+        <div class="articles__grid">
+          <!--ARTICLE-->
+          <div class="article">
+            <img class="article__image" src="<%= require('./images/article/__images/image_01.jpg')%>" alt="article-image">
+            <time class="article__data" datetime="2019-08-02">2 августа, 2019</time>
+            <h3 class="article__title">Национальное достояние – парки</h3>
+            <p class="article__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
+            <span class="article__source">Лента.ру</span>
+            <button class="article__button article__button_trash">
+              <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M15 3H9V5H3V7H21V5H15V3ZM5 9V20C5 21.1046 5.89543 22 7 22H17C18.1046 22 19 21.1046 19 20V9H17V20H7V9H5ZM9 9L9 18H11L11 9H9ZM13 9V18H15V9H13Z" />
+              </svg>
+            </button>
+            <div class="article__keys">
+              <span class="article__key">Природа</span>
+            </div>
+          </div>
+          <!--ARTICLE-->
+          <div class="article">
+            <img class="article__image" src="<%= require('./images/article/__images/image_06.jpg')%>" alt="article-image">
+            <time class="article__data" datetime="2019-08-02">2 августа, 2019</time>
+            <h3 class="article__title">Лесные огоньки: история одной фотографии</h3>
+            <p class="article__text">Фотограф отвлеклась от освещения суровой политической реальности Мексики.</p>
+            <span class="article__source">Медуза</span>
+            <button class="article__button article__button_trash">
+              <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M15 3H9V5H3V7H21V5H15V3ZM5 9V20C5 21.1046 5.89543 22 7 22H17C18.1046 22 19 21.1046 19 20V9H17V20H7V9H5ZM9 9L9 18H11L11 9H9ZM13 9V18H15V9H13Z" />
+              </svg>
+            </button>
+            <div class="article__keys">
+              <span class="article__key">Природа</span>
+            </div>
+          </div>
+          <!--ARTICLE-->
+          <div class="article">
+            <img class="article__image" src="<%= require('./images/article/__images/image_05.jpg')%>" alt="article-image">
+            <time class="article__data" datetime="2019-08-02">2 августа, 2019</time>
+            <h3 class="article__title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h3>
+            <p class="article__text">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
+            <span class="article__source">Риа</span>
+            <button class="article__button article__button_trash">
+              <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M15 3H9V5H3V7H21V5H15V3ZM5 9V20C5 21.1046 5.89543 22 7 22H17C18.1046 22 19 21.1046 19 20V9H17V20H7V9H5ZM9 9L9 18H11L11 9H9ZM13 9V18H15V9H13Z" />
+              </svg>
+            </button>
+            <div class="article__keys">
+              <span class="article__key">Тайга</span>
+            </div>
+          </div>
+          <!--ARTICLE-->
+          <div class="article">
+            <img class="article__image" src="<%= require('./images/article/__images/image_01.jpg')%>" alt="article-image">
+            <time class="article__data" datetime="2019-08-02">2 августа, 2019</time>
+            <h3 class="article__title">Национальное достояние – парки</h3>
+            <p class="article__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
+            <span class="article__source">Лента.ру</span>
+            <button class="article__button article__button_trash">
+              <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M15 3H9V5H3V7H21V5H15V3ZM5 9V20C5 21.1046 5.89543 22 7 22H17C18.1046 22 19 21.1046 19 20V9H17V20H7V9H5ZM9 9L9 18H11L11 9H9ZM13 9V18H15V9H13Z" />
+              </svg>
+            </button>
+            <div class="article__keys">
+              <span class="article__key">Парки</span>
+            </div>
+          </div>
+          <!--ARTICLE-->
+          <div class="article">
+            <img class="article__image" src="<%= require('./images/article/__images/image_06.jpg')%>" alt="article-image">
+            <time class="article__data" datetime="2019-08-02">2 августа, 2019</time>
+            <h3 class="article__title">Лесные огоньки: история одной фотографии</h3>
+            <p class="article__text">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного
+              из местных чудес природы.</p>
+            <span class="article__source">Медуза</span>
+            <button class="article__button article__button_trash">
+              <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M15 3H9V5H3V7H21V5H15V3ZM5 9V20C5 21.1046 5.89543 22 7 22H17C18.1046 22 19 21.1046 19 20V9H17V20H7V9H5ZM9 9L9 18H11L11 9H9ZM13 9V18H15V9H13Z" />
+              </svg>
+            </button>
+            <div class="article__keys">
+              <span class="article__key">Фотография</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!--FOOTER-->
+    <footer class="footer">
+      <address class="footer__copyright">&copy; 2020 Supersite, Powered by News API</address>
+      <nav class="navigation navigation_footer">
+        <ul class="navigation__menu navigation__menu_footer">
+          <li class="navigation__item navigation__item_footer">
+            <a class="link" href="./index.html">Главная</a>
+          </li>
+          <li class="navigation__item navigation__item_footer">
+            <a class="link" href="https://praktikum.yandex.ru">Яндекс.Практикум</a>
+          </li>
+        </ul>
+        <div class="footer__social">
+          <a class="link link_social" href="https://github.com/YaVladislav/news-explorer-frontend">
+            <img class="footer__social-icon" src="<%= require('./images/footer/__social/GH.svg')%>" alt="GitHub">
+          </a>
+          <a class="link link_social" href="https://www.facebook.com/yandex.praktikum/">
+            <img class="footer__social-icon" src="<%= require('./images/footer/__social/FB.svg')%>" alt="FaceBook">
+          </a>
+        </div>
+      </nav>
+    </footer>
+  </div>
+</body>
+</html>

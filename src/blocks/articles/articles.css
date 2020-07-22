@@ -1,0 +1,21 @@
+@import url('./__grid/__grid.css');
+@import url('./__keys/__keys.css');
+@import url('./__key/__key.css');
+@import url('./__button/__button.css');
+
+.articles {
+  padding: 0 104px;
+  color: #1A1B22;
+}
+
+@media screen and (max-width: 960px) {
+  .articles {
+    padding: 0 40px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .articles {
+    padding: 0 16px;
+  }
+}

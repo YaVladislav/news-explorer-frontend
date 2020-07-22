@@ -1,0 +1,20 @@
+.navigation__item {
+  display: flex;
+  align-items: center;
+  margin-left: 34px;
+  height: 100%;
+}
+
+.navigation__item_active {
+  border-bottom: 3px solid;
+  background-color: inherit;
+  box-sizing: border-box;
+}
+
+
+@media screen and (max-width: 760px) {
+  .navigation__item_footer {
+    margin-left: 0;
+    margin-bottom: 38px;
+  }
+}
