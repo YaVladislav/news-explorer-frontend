@@ -1,6 +1,7 @@
 export default class {
   constructor(popup) {
     this.popup = popup;
+    this.setEventListener();
   }
 
   toggle() {

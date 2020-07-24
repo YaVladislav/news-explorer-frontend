@@ -2,6 +2,7 @@ import '../pages/index.css';
 import 'normalize.css';
 
 import Popup from './Popup';
+import FormValidator from './FormValidator';
 
 (function () {
   // buttons
@@ -9,11 +10,14 @@ import Popup from './Popup';
   // popups
   const popupSignin = new Popup(document.querySelector('.popup_signin'));
   const popupSignup = new Popup(document.querySelector('.popup_signup'));
-  const popupSuccessful = new Popup(document.querySelector('.popup_successful'));
-
+  // const popupSuccessful = new Popup(document.querySelector('.popup_successful'));
+  // validation
+  const signinValidator = new FormValidator(document.querySelector('.popup__form_signin'));
+  const signupValidator = new FormValidator(document.querySelector('.popup__form_signup'));
+  signinValidator.setEventListeners();
+  signupValidator.setEventListeners();
+  // events
   headerButton.addEventListener('click', () => { popupSignin.toggle(); });
-  popupSignin.setEventListener();
-  popupSignup.setEventListener();
   document.addEventListener('click', (e) => {
     if (e.target.classList.contains('popup__checkout')) {
       popupSignin.toggle();
