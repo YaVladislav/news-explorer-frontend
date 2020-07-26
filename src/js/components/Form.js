@@ -1,9 +1,53 @@
 export default class {
-  constructor(form) {
+  constructor(api, popap, form) {
+    this.api = api;
+    this.popap = popap;
     this.form = form;
   }
 
-  checkInputValidity() {
+  setServerError(message) {
+    this.form.querySelector('.error').textContent = message;
+  }
+
+  setEventListeners() {
+    const { form } = this;
+    form.addEventListener('input', (e) => {
+      this.input = e.target;
+      this._checkInputValidity();
+    });
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      this._submitSignin(e);
+      this._submitSignup(e);
+    });
+  }
+
+  _submitSignin(e) {
+    if (this.form.classList.contains('popup__form_signin')) {
+      this.api.signin(
+        e.target.email.value,
+        e.target.password.value,
+      )
+        .then((result) => {
+          console.log(result);
+        })
+        .catch((err) => { this.setServerError(err.message); });
+    }
+  }
+
+  _submitSignup(e) {
+    if (this.form.classList.contains('popup__form_signup')) {
+      this.api.signup(
+        e.target.email.value,
+        e.target.password.value,
+        e.target.name.value,
+      )
+        .then(() => { this.popap.setContentSucceful(); })
+        .catch((err) => { this.setServerError(err.message); });
+    }
+  }
+
+  _checkInputValidity() {
     const { input } = this;
     const error = input.nextElementSibling;
     if (input.validity.valid) {
@@ -30,24 +74,16 @@ export default class {
       error.innerText = errorMessage;
       error.classList.add('popup__error_active');
     }
-    this.setSubmitButtonState();
+    this._setSubmitButtonState();
   }
 
-  setSubmitButtonState() {
+  _setSubmitButtonState() {
     const submitButton = this.form.querySelector('.popup__button');
     submitButton.removeAttribute('disabled');
     this.form.elements.forEach((element) => {
       if (!element.validity.valid) {
         submitButton.setAttribute('disabled', '');
       }
-    });
-  }
-
-  setEventListeners() {
-    const { form } = this;
-    form.addEventListener('input', (e) => {
-      this.input = e.target;
-      this.checkInputValidity();
     });
   }
 }

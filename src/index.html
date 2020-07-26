@@ -163,12 +163,13 @@
             <input class="popup__input" id="password" type="password" name="password" minlength="8" placeholder="Введите пароль" required>
             <span class="popup__error"></span>  
           </div>
+          <span class="error"></span>
           <button type="submit" class="button popup__button" disabled>Войти</button>
-          <p class="popup__checkout-text">
-            или
-            <button class="popup__checkout">Зарегистрироваться</button>
-          </p>
         </form>
+        <p class="popup__checkout-text">
+          или
+          <button class="popup__checkout">Зарегистрироваться</button>
+        </p>
       </div>
     </div>
     <!--POPUP SIGNUP модификатор класса _is-opened делает попап видимым-->
@@ -189,24 +190,15 @@
           </div>
           <div class="popup__input-field">
             <label class="popup__label" for="name">Имя</label>
-            <input class="popup__input" id="name" type="text" name="name" minlength="2" maxlength="20" placeholder="Введите пароль" required>
+            <input class="popup__input" id="name" type="text" name="name" minlength="2" maxlength="20" placeholder="Введите имя" required>
             <span class="popup__error"></span>  
           </div>
+          <span class="error"></span>
           <button type="submit" class="button popup__button" disabled>Зарегистрироваться</button>
-          <p class="popup__checkout-text">
-            или
-            <button class="popup__checkout">Войти</button>
-          </p>
         </form>
-      </div>
-    </div>
-    <!--POPUP SUCCESSFUL модификатор класса _is-opened делает попап видимым-->
-    <div class="popup popup_successful">
-      <div class="popup__content">
-        <img class="popup__close" src="<%= require('./images/popup/close.svg')%>" alt="Close">
-        <h3 class="popup__title">Пользователь успешно зарегистрирован!</h3>
-        <p class="popup__checkout-text popup__checkout-text_success">
-          <button class="popup__checkout">Выполнить вход</button>
+        <p class="popup__checkout-text">
+          или
+          <button class="popup__checkout">Войти</button>
         </p>
       </div>
     </div>
