@@ -17,23 +17,61 @@ import Api from './api/Api';
     },
     credentials: 'include',
   });
-  //
+  // Header
   const header = new Header(document.querySelector('.header'));
   // Popups
   const popupSignin = new Popup(document.querySelector('.popup_signin'));
   const popupSignup = new Popup(document.querySelector('.popup_signup'));
-  // const popupSuccessful = new Popup(document.querySelector('.popup_successful'));
-  // Forms
-  const signinForm = new Form(api, popupSignin, document.querySelector('.popup__form_signin'));
-  const signupForm = new Form(api, popupSignup, document.querySelector('.popup__form_signup'));
+  // Form
+  const form = new Form(api, { popupSignin, popupSignup });
   // Events
-  headerButton.addEventListener('click', () => { popupSignin.toggle(); });
+  headerButton.addEventListener('click', () => {
+    if (!localStorage.isLoggedIn) {
+      popupSignin.toggle();
+    } else {
+      localStorage.clear();
+      header.render();
+    }
+  });
   document.addEventListener('click', (e) => {
     if (e.target.classList.contains('popup__checkout')) {
       popupSignin.toggle();
       popupSignup.toggle();
+      form.setServerError('');
     }
   });
-  signinForm.setEventListeners();
-  signupForm.setEventListeners();
+  document.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const targetForm = e.target;
+    if (targetForm.classList.contains('popup__form_signin')) {
+      api.signin(
+        targetForm.email.value,
+        targetForm.password.value,
+      )
+        .then((result) => {
+          localStorage.isLoggedIn = true;
+          localStorage.userName = result.user.name;
+          popupSignin.toggle();
+          header.render();
+        })
+        .catch((err) => { form.setServerError(err.message); });
+    }
+    if (targetForm.classList.contains('popup__form_signup')) {
+      api.signup(
+        targetForm.email.value,
+        targetForm.password.value,
+        targetForm.name.value,
+      )
+        .then(() => popupSignup.setContentSucceful())
+        .catch((err) => { form.setServerError(err.message); });
+    }
+  });
+  document.addEventListener('input', (e) => {
+    if (!e.target.classList.contains('search__input')) {
+      form.validation(e.target);
+      form.setServerError('');
+    }
+  });
+  // Render
+  header.render();
 }());

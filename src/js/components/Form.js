@@ -1,54 +1,24 @@
+/* eslint-disable no-param-reassign */
 export default class {
-  constructor(api, popap, form) {
+  constructor(api, popups) {
     this.api = api;
-    this.popap = popap;
-    this.form = form;
+    this.popups = {
+      signin: popups.popupSignin,
+      signup: popups.popupSignup,
+    };
+  }
+
+  validation(input) {
+    this._checkInputValidity(input);
+    this._setSubmitButtonState(input);
   }
 
   setServerError(message) {
-    this.form.querySelector('.error').textContent = message;
+    const errorContainer = document.querySelectorAll('.error');
+    errorContainer.forEach((item) => { item.textContent = message; });
   }
 
-  setEventListeners() {
-    const { form } = this;
-    form.addEventListener('input', (e) => {
-      this.input = e.target;
-      this._checkInputValidity();
-    });
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      this._submitSignin(e);
-      this._submitSignup(e);
-    });
-  }
-
-  _submitSignin(e) {
-    if (this.form.classList.contains('popup__form_signin')) {
-      this.api.signin(
-        e.target.email.value,
-        e.target.password.value,
-      )
-        .then((result) => {
-          console.log(result);
-        })
-        .catch((err) => { this.setServerError(err.message); });
-    }
-  }
-
-  _submitSignup(e) {
-    if (this.form.classList.contains('popup__form_signup')) {
-      this.api.signup(
-        e.target.email.value,
-        e.target.password.value,
-        e.target.name.value,
-      )
-        .then(() => { this.popap.setContentSucceful(); })
-        .catch((err) => { this.setServerError(err.message); });
-    }
-  }
-
-  _checkInputValidity() {
-    const { input } = this;
+  _checkInputValidity(input) {
     const error = input.nextElementSibling;
     if (input.validity.valid) {
       error.innerText = '';
@@ -74,13 +44,13 @@ export default class {
       error.innerText = errorMessage;
       error.classList.add('popup__error_active');
     }
-    this._setSubmitButtonState();
   }
 
-  _setSubmitButtonState() {
-    const submitButton = this.form.querySelector('.popup__button');
+  _setSubmitButtonState(input) {
+    const form = input.closest('.popup__form');
+    const submitButton = form.querySelector('.popup__button');
     submitButton.removeAttribute('disabled');
-    this.form.elements.forEach((element) => {
+    form.elements.forEach((element) => {
       if (!element.validity.valid) {
         submitButton.setAttribute('disabled', '');
       }

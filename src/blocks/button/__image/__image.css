@@ -1,5 +1,5 @@
 .button__image {
-  display: none;
+  display: block;
   width: 24px;
   height: 24px;
   fill: #fff ;
@@ -10,8 +10,4 @@
 
 .button__image_dark {
   fill: #1A1B22;
-}
-
-.button__image_active {
-  display: block;
 }

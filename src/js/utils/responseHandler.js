@@ -7,6 +7,6 @@ export default (response) => {
     case 400:
       throw new Error('Неправильный запрос');
     default:
-      return response.json();
+      break;
   }
 };

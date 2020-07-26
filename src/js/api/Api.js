@@ -17,6 +17,9 @@ export default class {
       }),
     })
       .then((res) => {
+        if (res.ok) {
+          return res.json();
+        }
         responseHandler(res);
       })
       .catch((err) => Promise.reject(err));
@@ -32,6 +35,9 @@ export default class {
       }),
     })
       .then((res) => {
+        if (res.ok) {
+          return res.json();
+        }
         responseHandler(res);
       })
       .catch((err) => Promise.reject(err));
