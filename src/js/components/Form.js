@@ -1,14 +1,10 @@
 /* eslint-disable no-param-reassign */
 export default class {
-  constructor(api, popups) {
+  constructor(api) {
     this.api = api;
-    this.popups = {
-      signin: popups.popupSignin,
-      signup: popups.popupSignup,
-    };
   }
 
-  validation(input) {
+  inputValidation(input) {
     this._checkInputValidity(input);
     this._setSubmitButtonState(input);
   }

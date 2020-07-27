@@ -68,7 +68,7 @@ import Api from './api/Api';
   });
   document.addEventListener('input', (e) => {
     if (!e.target.classList.contains('search__input')) {
-      form.validation(e.target);
+      form.inputValidation(e.target);
       form.setServerError('');
     }
   });
