@@ -5,6 +5,7 @@ import Header from './components/Header';
 import Popup from './components/Popup';
 import Form from './components/Form';
 import Api from './api/Api';
+import NewsApi from './api/NewsApi';
 
 (function () {
   // Buttons
@@ -15,7 +16,12 @@ import Api from './api/Api';
     headers: {
       'Content-Type': 'application/json',
     },
-    credentials: 'include',
+  });
+  const newsApi = new NewsApi({
+    baseUrl: 'http://newsapi.org/v2',
+    headers: {
+      'X-Api-Key': 'b6f680c65e9f44fbb3fdd0031c6694d0',
+    },
   });
   // Header
   const header = new Header(document.querySelector('.header'));
@@ -64,6 +70,11 @@ import Api from './api/Api';
       )
         .then(() => popupSignup.setContentSucceful())
         .catch((err) => { form.setServerError(err.message); });
+    }
+    if (targetForm.classList.contains('search__form')) {
+      newsApi.getNews(
+        targetForm.keyword.value,
+      );
     }
   });
   document.addEventListener('input', (e) => {
