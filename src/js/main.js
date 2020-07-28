@@ -6,10 +6,13 @@ import Popup from './components/Popup';
 import Form from './components/Form';
 import Api from './api/Api';
 import NewsApi from './api/NewsApi';
+import Article from './components/Article';
+import ArticleList from './components/ArticleList';
 
 (function () {
   // Buttons
   const headerButton = document.querySelector('.header__button');
+  const articlesButton = document.querySelector('.articles__button');
   // Api
   const api = new Api({
     baseUrl: 'https://api.jswa.online',
@@ -30,6 +33,9 @@ import NewsApi from './api/NewsApi';
   const popupSignup = new Popup(document.querySelector('.popup_signup'));
   // Form
   const form = new Form(api, { popupSignin, popupSignup });
+  // Article
+  const article = new Article();
+  const articleList = new ArticleList(document.querySelector('.articles__grid'), article);
   // Events
   headerButton.addEventListener('click', () => {
     if (!localStorage.isLoggedIn) {
@@ -38,6 +44,9 @@ import NewsApi from './api/NewsApi';
       localStorage.clear();
       header.render();
     }
+  });
+  articlesButton.addEventListener('click', () => {
+    articleList.showMore();
   });
   document.addEventListener('click', (e) => {
     if (e.target.classList.contains('popup__checkout')) {
@@ -49,6 +58,7 @@ import NewsApi from './api/NewsApi';
   document.addEventListener('submit', (e) => {
     e.preventDefault();
     const targetForm = e.target;
+    // SIGNIN
     if (targetForm.classList.contains('popup__form_signin')) {
       api.signin(
         targetForm.email.value,
@@ -62,6 +72,7 @@ import NewsApi from './api/NewsApi';
         })
         .catch((err) => { form.setServerError(err.message); });
     }
+    // SIGNUP
     if (targetForm.classList.contains('popup__form_signup')) {
       api.signup(
         targetForm.email.value,
@@ -71,10 +82,13 @@ import NewsApi from './api/NewsApi';
         .then(() => popupSignup.setContentSucceful())
         .catch((err) => { form.setServerError(err.message); });
     }
+    // SEARCH
     if (targetForm.classList.contains('search__form')) {
       newsApi.getNews(
         targetForm.keyword.value,
-      );
+      )
+        .then((results) => articleList.renderResults(results.articles))
+        .catch((err) => console.log(err));
     }
   });
   document.addEventListener('input', (e) => {

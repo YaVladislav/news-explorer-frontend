@@ -1,4 +1,4 @@
-import setDate from '../utils/setDate';
+import setDate from '../utils/setTodayDate';
 
 export default class {
   constructor(option) {
@@ -16,7 +16,7 @@ export default class {
     return fetch(url, {
       headers: this.headers,
     })
-      .then((res) => console.log(res.json()))
+      .then((res) => res.json())
       .catch((err) => console.log(err));
   }
 }
