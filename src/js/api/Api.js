@@ -15,6 +15,7 @@ export default class {
         password,
         name,
       }),
+      credentials: 'include',
     })
       .then((res) => {
         if (res.ok) {
@@ -33,6 +34,7 @@ export default class {
         email,
         password,
       }),
+      credentials: 'include',
     })
       .then((res) => {
         if (res.ok) {
@@ -56,6 +58,7 @@ export default class {
         source: article.source,
         keyword: article.keyword,
       }),
+      credentials: 'include',
     })
       .then((res) => {
         if (res.ok) {

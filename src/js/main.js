@@ -35,7 +35,8 @@ import ArticleList from './components/ArticleList';
   const form = new Form(api, { popupSignin, popupSignup });
   // Article
   const article = new Article();
-  const articleList = new ArticleList(document.querySelector('.articles__grid'), article, api);
+  const articleContainer = document.querySelector('.articles__grid');
+  const articleList = new ArticleList(articleContainer, article, api);
   // Events
   headerButton.addEventListener('click', () => {
     if (!localStorage.isLoggedIn) {
@@ -87,7 +88,9 @@ import ArticleList from './components/ArticleList';
       const { value } = targetForm.keyword;
       newsApi.getNews(value)
         .then((results) => {
+          articleList.cards = [];
           results.articles.forEach((articleCard) => { articleList.addCard(articleCard, value); });
+          articleContainer.innerHTML = '';
           articleList.renderResults();
         })
         .catch((err) => console.log(err));
