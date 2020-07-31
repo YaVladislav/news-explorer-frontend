@@ -92,6 +92,8 @@ import ArticleList from './components/ArticleList';
       articleList.renderLoader('active');
       newsApi.getNews(value)
         .then((results) => {
+          articleContainer.innerHTML = '';
+          articleContainer.parentElement.classList.remove('articles_active');
           if (results.totalResults === 0) {
             articleList.renderError();
             return;
@@ -99,7 +101,6 @@ import ArticleList from './components/ArticleList';
           articleList.renderLoader('inactive');
           articleList.cards = [];
           results.articles.forEach((articleCard) => { articleList.addCard(articleCard, value); });
-          articleContainer.innerHTML = '';
           articleList.renderResults();
         })
         .catch((err) => console.log(err));
