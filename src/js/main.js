@@ -13,6 +13,8 @@ import ArticleList from './components/ArticleList';
   // Buttons
   const headerButton = document.querySelector('.header__button');
   const articlesButton = document.querySelector('.articles__button');
+  // Preloader
+  const preloader = document.querySelector('.preloader');
   // Api
   const api = new Api({
     baseUrl: 'https://api.jswa.online',
@@ -34,9 +36,10 @@ import ArticleList from './components/ArticleList';
   // Form
   const form = new Form(api, { popupSignin, popupSignup });
   // Article
-  const article = new Article();
+  const article = new Article('index');
   const articleContainer = document.querySelector('.articles__grid');
-  const articleList = new ArticleList(articleContainer, article, api);
+  const articleList = new ArticleList(articleContainer, preloader, article, api);
+
   // Events
   headerButton.addEventListener('click', () => {
     if (!localStorage.isLoggedIn) {
@@ -86,8 +89,14 @@ import ArticleList from './components/ArticleList';
     // SEARCH
     if (targetForm.classList.contains('search__form')) {
       const { value } = targetForm.keyword;
+      articleList.renderLoader('active');
       newsApi.getNews(value)
         .then((results) => {
+          if (results.totalResults === 0) {
+            articleList.renderError();
+            return;
+          }
+          articleList.renderLoader('inactive');
           articleList.cards = [];
           results.articles.forEach((articleCard) => { articleList.addCard(articleCard, value); });
           articleContainer.innerHTML = '';

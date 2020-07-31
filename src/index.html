@@ -48,7 +48,7 @@
         <h2 class="preloader__text">Идет поиск новостей...</h2>
       </section>
       <!--SECTION PRELOADER-RESULT (модификатор класса _active делает preloader видимым)-->
-      <section class="preloader">
+      <section class="preloader preloader_err">
         <img class="preloader__image" src="<%= require('./images/preloader/not-found.svg')%>" alt="not-found">
         <h2 class="preloader__title">Ничего не найдено</h2>
         <h3 class="preloader__text">К сожалению по вашему запросу ничего не найдено.</h3>
@@ -110,12 +110,12 @@
           <div class="popup__input-field">
             <label class="popup__label" for="email">Email</label>
             <input class="popup__input" id="email" type="email" name="email" placeholder="Введите email" required>
-            <span class="popup__error"></span>  
+            <span class="popup__error"></span>
           </div>
           <div class="popup__input-field">
             <label class="popup__label" for="password">Пароль</label>
             <input class="popup__input" id="password" type="password" name="password" minlength="8" placeholder="Введите пароль" required>
-            <span class="popup__error"></span>  
+            <span class="popup__error"></span>
           </div>
           <span class="error"></span>
           <button type="submit" class="button popup__button" disabled>Войти</button>
@@ -135,17 +135,17 @@
           <div class="popup__input-field">
             <label class="popup__label" for="email">Email</label>
             <input class="popup__input" id="email" type="email" name="email" placeholder="Введите email" required>
-            <span class="popup__error"></span>    
+            <span class="popup__error"></span>
           </div>
           <div class="popup__input-field">
             <label class="popup__label" for="password">Пароль</label>
             <input class="popup__input" id="password" type="password" name="password" minlength="8" placeholder="Введите пароль" required>
-            <span class="popup__error"></span>  
+            <span class="popup__error"></span>
           </div>
           <div class="popup__input-field">
             <label class="popup__label" for="name">Имя</label>
             <input class="popup__input" id="name" type="text" name="name" minlength="2" maxlength="20" placeholder="Введите имя" required>
-            <span class="popup__error"></span>  
+            <span class="popup__error"></span>
           </div>
           <span class="error"></span>
           <button type="submit" class="button popup__button" disabled>Зарегистрироваться</button>
