@@ -7,11 +7,10 @@
 @import url('./__icon/__icon.css');
 @import url('./__key/__key.css');
 @import url('./__keys/__keys.css');
+@import url('./__link/__link.css');
 
 .article {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   color: #1A1B22;
   border-radius: 16px;
   position: relative;

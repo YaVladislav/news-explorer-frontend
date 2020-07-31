@@ -35,7 +35,7 @@ import ArticleList from './components/ArticleList';
   const form = new Form(api, { popupSignin, popupSignup });
   // Article
   const article = new Article();
-  const articleList = new ArticleList(document.querySelector('.articles__grid'), article);
+  const articleList = new ArticleList(document.querySelector('.articles__grid'), article, api);
   // Events
   headerButton.addEventListener('click', () => {
     if (!localStorage.isLoggedIn) {
@@ -84,10 +84,12 @@ import ArticleList from './components/ArticleList';
     }
     // SEARCH
     if (targetForm.classList.contains('search__form')) {
-      newsApi.getNews(
-        targetForm.keyword.value,
-      )
-        .then((results) => articleList.renderResults(results.articles))
+      const { value } = targetForm.keyword;
+      newsApi.getNews(value)
+        .then((results) => {
+          results.articles.forEach((articleCard) => { articleList.addCard(articleCard, value); });
+          articleList.renderResults();
+        })
         .catch((err) => console.log(err));
     }
   });

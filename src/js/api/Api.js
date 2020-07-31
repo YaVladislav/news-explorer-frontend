@@ -42,4 +42,27 @@ export default class {
       })
       .catch((err) => Promise.reject(err));
   }
+
+  createArticle(article) {
+    return fetch(`${this.baseUrl}/articles`, {
+      method: 'POST',
+      headers: this.headers,
+      body: JSON.stringify({
+        link: article.url,
+        image: article.urlToImage,
+        date: article.publishedAt,
+        title: article.title,
+        text: article.description,
+        source: article.source,
+        keyword: article.keyword,
+      }),
+    })
+      .then((res) => {
+        if (res.ok) {
+          return res.json();
+        }
+        responseHandler(res);
+      })
+      .catch((err) => Promise.reject(err));
+  }
 }
