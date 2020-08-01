@@ -25,7 +25,7 @@ import checkNull from './utils/checkNull';
     },
   });
   const newsApi = new NewsApi({
-    baseUrl: 'http://newsapi.org/v2',
+    baseUrl: 'https://praktikum.tk/news/v2',
     headers: {
       'X-Api-Key': 'b6f680c65e9f44fbb3fdd0031c6694d0',
     },

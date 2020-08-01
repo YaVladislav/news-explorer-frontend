@@ -1,5 +1,4 @@
 /* eslint-disable no-param-reassign */
-
 export default function (obj) {
   switch (null) {
     case obj.urlToImage:

@@ -56,17 +56,23 @@
       </section>
       <!--SECTION ABOUT-->
       <section class="about">
-        <picture class="about__avatar">
+        <picture>
           <source srcset="<%= require('./images/about/__avatar/avatar-small.jpg')%>" media="(max-width: 960px)">
-          <img src="<%= require('./images/about/__avatar/avatar.jpg')%>" alt="avatar">
+          <img class="about__avatar" src="<%= require('./images/about/__avatar/avatar.jpg')%>" alt="avatar">
         </picture>
         <div class="about__container">
           <h2 class="content__title">Об авторе</h2>
           <p class="about__author">
-            Это блок с описанием автора проекта. Здесь следует указать, как вас зовут, чем вы занимаетесь, какими технологиями разработки владеете.
+            Меня зовут Владислав. По образованию инженер ПГС. Владею популярными программами для проектирования и расчетов в строительной области.
           </p>
           <p class="about__author">
-            Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь потенциальным заказчикам.
+            Еще до Я.Практикума поверхностно владел версткой, HTML, PHP, контекстной рекламой и слышал о JavaScript... :)
+          </p>
+          <p class="about__author">
+            Теперь же, вместе с Я.Практикумом, мне приоткрылся этот мир веб разработки. И теперь я точно знаю что такое JavaScript и с чем его едят!
+          </p>
+          <p class="about__author">
+            Но впереди еще долгий путь к знаниям... век живи, век учись.
           </p>
         </div>
       </section>

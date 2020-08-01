@@ -11,7 +11,8 @@ export default class {
                 + `q=${keyword}&`
                 + `from=${setDate(-7)}&`
                 + `to=${setDate()}&`
-                + 'pageSize=100';
+                + 'pageSize=100&'
+                + 'apiKey=b6f680c65e9f44fbb3fdd0031c6694d0';
 
     return fetch(url, {
       headers: this.headers,
