@@ -8,7 +8,7 @@ import ArticleList from './components/ArticleList';
 import ContentTitles from './components/ContentTitles';
 
 (function () {
-  if (!localStorage.isLoggedIn) window.location.href = '/';
+  if (!localStorage.isLoggedIn) window.location.href = '/news-explorer-frontend/';
   // Buttons
   const headerButton = document.querySelector('.header__button');
   // Api
