@@ -1,0 +1,21 @@
+.article__message {
+  display: none;
+  align-items: center;
+  height: 100%;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 12px;
+  position: absolute;
+  right: 45px;
+  background: #fff;
+  white-space: nowrap;
+  border-radius: 8px;
+  padding: 0 8px;
+}
+
+.article__button:hover .article__message_active {
+  transition: .1s linear;
+  display: flex;
+}

@@ -26,6 +26,21 @@ export default class {
       .catch((err) => Promise.reject(err));
   }
 
+  signout() {
+    return fetch(`${this.baseUrl}/signout`, {
+      method: 'POST',
+      headers: this.headers,
+      credentials: 'include',
+    })
+      .then((res) => {
+        if (res.ok) {
+          return res.json();
+        }
+        responseHandler(res);
+      })
+      .catch((err) => Promise.reject(err));
+  }
+
   signin(email, password) {
     return fetch(`${this.baseUrl}/signin`, {
       method: 'POST',
@@ -58,6 +73,21 @@ export default class {
         source: article.source,
         keyword: article.keyword,
       }),
+      credentials: 'include',
+    })
+      .then((res) => {
+        if (res.ok) {
+          return res.json();
+        }
+        responseHandler(res);
+      })
+      .catch((err) => Promise.reject(err));
+  }
+
+  deleteArticle(article) {
+    return fetch(`${this.baseUrl}/articles/${article._id}`, {
+      method: 'DELETE',
+      headers: this.headers,
       credentials: 'include',
     })
       .then((res) => {

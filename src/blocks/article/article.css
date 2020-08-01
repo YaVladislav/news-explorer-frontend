@@ -8,6 +8,7 @@
 @import url('./__key/__key.css');
 @import url('./__keys/__keys.css');
 @import url('./__link/__link.css');
+@import url('./__message/__message.css');
 
 .article {
   display: flex;

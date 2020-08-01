@@ -1,28 +1,26 @@
 import notFoundImage from '../../images/preloader/not-found.svg';
 
 export default class {
-  constructor(container, preloader, articleMethod, apiMethod) {
+  constructor(container, preloader, articleMethod) {
     this.container = container;
     this.preloader = preloader;
     this.articleMethod = articleMethod;
-    this.apiMethod = apiMethod;
   }
 
   renderResults() {
     const {
       container,
       articleMethod,
-      apiMethod,
       cards,
     } = this;
     container.parentElement.classList.add('articles_active');
     const cardsQuantity = container.childElementCount;
     for (let i = cardsQuantity; i <= cardsQuantity + 2; i += 1) {
       const article = articleMethod.create(cards[i]);
+      if (!article) {
+        return;
+      }
       container.appendChild(article);
-      article.querySelector('.article__button').addEventListener('click', () => {
-        apiMethod.createArticle(cards[i]);
-      });
     }
   }
 

@@ -18,6 +18,7 @@ import ArticleList from './components/ArticleList';
   // Api
   const api = new Api({
     baseUrl: 'https://api.jswa.online',
+    // baseUrl: 'http://localhost:3000',
     headers: {
       'Content-Type': 'application/json',
     },
@@ -36,9 +37,9 @@ import ArticleList from './components/ArticleList';
   // Form
   const form = new Form(api, { popupSignin, popupSignup });
   // Article
-  const article = new Article('index');
+  const article = new Article('index', api);
   const articleContainer = document.querySelector('.articles__grid');
-  const articleList = new ArticleList(articleContainer, preloader, article, api);
+  const articleList = new ArticleList(articleContainer, preloader, article);
 
   // Events
   headerButton.addEventListener('click', () => {
@@ -46,7 +47,8 @@ import ArticleList from './components/ArticleList';
       popupSignin.toggle();
     } else {
       localStorage.clear();
-      header.render();
+      api.signout();
+      window.location.reload();
     }
   });
   articlesButton.addEventListener('click', () => {
