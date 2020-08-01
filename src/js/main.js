@@ -14,7 +14,10 @@ import checkNull from './utils/checkNull';
 (function () {
   // Buttons
   const headerButton = document.querySelector('.header__button');
+  const buttonMenu = document.querySelector('.header__menu');
   const articlesButton = document.querySelector('.articles__button');
+  // Menu
+  const navigationMenu = document.querySelector('.navigation__menu_header');
   // Preloader
   const preloader = document.querySelector('.preloader');
   // Api
@@ -43,6 +46,9 @@ import checkNull from './utils/checkNull';
   const articleList = new ArticleList(articleContainer, article, preloader);
 
   // Events
+  buttonMenu.addEventListener('click', () => {
+    navigationMenu.classList.toggle('navigation__menu_open');
+  });
   headerButton.addEventListener('click', () => {
     if (!localStorage.isLoggedIn) {
       popupSignin.toggle();

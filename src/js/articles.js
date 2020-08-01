@@ -11,6 +11,9 @@ import ContentTitles from './components/ContentTitles';
   if (!localStorage.isLoggedIn) window.location.href = '/news-explorer-frontend/';
   // Buttons
   const headerButton = document.querySelector('.header__button');
+  const buttonMenu = document.querySelector('.header__menu');
+  // Menu
+  const navigationMenu = document.querySelector('.navigation__menu_header');
   // Api
   const api = new Api({
     baseUrl: 'https://api.jswa.online',
@@ -27,6 +30,9 @@ import ContentTitles from './components/ContentTitles';
   const article = new Article('articles', api, contentTitles);
   const articleList = new ArticleList(articleContainer, article);
   // Events
+  buttonMenu.addEventListener('click', () => {
+    navigationMenu.classList.toggle('navigation__menu_open');
+  });
   headerButton.addEventListener('click', () => {
     localStorage.clear();
     api.signout();
