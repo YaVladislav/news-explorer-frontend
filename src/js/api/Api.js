@@ -15,7 +15,6 @@ export default class {
         password,
         name,
       }),
-      credentials: 'include',
     })
       .then((res) => {
         if (res.ok) {
