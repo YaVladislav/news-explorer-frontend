@@ -13,16 +13,26 @@ export default class {
     const article = document.createElement('div');
     article.className = 'article';
     article.insertAdjacentHTML('beforeend', `
-      <a class="article__link" href="${card.url}" target="_blank">
-        <img  class="article__image" src="${card.urlToImage}" alt="article-image">
-        <time class="article__data" datetime="${card.publishedAt}">${setDate(card.publishedAt)}</time>
+      <a class="article__link" href="${card.link}" target="_blank">
+        <img  class="article__image" src="${card.image}" alt="article-image">
+        <time class="article__data" datetime="${card.date}">${setDate(card.date)}</time>
         <h2 class="article__title">${card.title}</h2>
-        <p class="article__text">${card.description}</p>
+        <p class="article__text">${card.text}</p>
         <span class="article__source">${card.source}</span>
       </a>
     `);
     article.append(this.renderIcon(card));
+    if (this.pageKey === 'articles') article.append(this.renderKeyword(card));
     return article;
+  }
+
+  renderKeyword(card) {
+    const keywords = document.createElement('div');
+    keywords.className = 'article__keys';
+    keywords.insertAdjacentHTML('beforeend', `
+      <span class="article__key">${card.keyword}</span>
+    `);
+    return keywords;
   }
 
   renderIcon(card) {
@@ -43,7 +53,7 @@ export default class {
     } else if (this.pageKey === 'articles') {
       message.innerText = 'Убрать из сохранённых';
       button.insertAdjacentHTML('beforeend', `
-        <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <svg class="article__icon" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd" clip-rule="evenodd" d="M15 3H9V5H3V7H21V5H15V3ZM5 9V20C5 21.1046 5.89543 22 7 22H17C18.1046 22 19 21.1046 19 20V9H17V20H7V9H5ZM9 9L9 18H11L11 9H9ZM13 9V18H15V9H13Z" />
         </svg>
       `);
@@ -71,7 +81,8 @@ export default class {
             });
         } else {
           apiMethod.deleteArticle(card);
-          icon.classList.remove('article__icon_marked');
+          // eslint-disable-next-line no-unused-expressions
+          this.pageKey === 'articles' ? element.parentElement.remove() : icon.classList.remove('article__icon_marked');
         }
       }
     });

@@ -60,18 +60,33 @@ export default class {
       .catch((err) => Promise.reject(err));
   }
 
-  createArticle(article) {
+  getArticles() {
+    return fetch(`${this.baseUrl}/articles`, {
+      headers: this.headers,
+      credentials: 'include',
+    })
+      .then((res) => {
+        if (res.ok) {
+          return res.json();
+        }
+        responseHandler(res);
+      })
+      .catch((err) => Promise.reject(err));
+  }
+
+  // eslint-disable-next-line no-unused-vars
+  createArticle(card) {
     return fetch(`${this.baseUrl}/articles`, {
       method: 'POST',
       headers: this.headers,
       body: JSON.stringify({
-        link: article.url,
-        image: article.urlToImage,
-        date: article.publishedAt,
-        title: article.title,
-        text: article.description,
-        source: article.source,
-        keyword: article.keyword,
+        link: card.link,
+        image: card.image,
+        date: card.date,
+        title: card.title,
+        text: card.text,
+        source: card.source,
+        keyword: card.keyword,
       }),
       credentials: 'include',
     })

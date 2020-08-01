@@ -1,7 +1,7 @@
 import notFoundImage from '../../images/preloader/not-found.svg';
 
 export default class {
-  constructor(container, preloader, articleMethod) {
+  constructor(container, articleMethod, preloader) {
     this.container = container;
     this.preloader = preloader;
     this.articleMethod = articleMethod;
@@ -50,22 +50,17 @@ export default class {
     this.renderResults(this.articles);
   }
 
-  addCard(article, keyword) {
-    const card = {
-      url: article.url,
-      urlToImage: article.urlToImage,
-      publishedAt: article.publishedAt,
-      title: article.title,
-      description: article.description,
-      source: article.source.name,
+  // eslint-disable-next-line no-unused-vars
+  addCard(link, image, date, title, text, source, keyword, _id) {
+    this.cards.push({
+      link,
+      image,
+      date,
+      title,
+      text,
+      source,
       keyword,
-    };
-    // eslint-disable-next-line no-restricted-syntax
-    for (const key in card) {
-      if (!card[key]) {
-        return;
-      }
-    }
-    this.cards.push(card);
+      _id,
+    });
   }
 }
