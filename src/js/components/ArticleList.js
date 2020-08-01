@@ -1,4 +1,4 @@
-import notFoundImage from '../../images/preloader/not-found.svg';
+import notFound from '../../images/preloader/not-found.svg';
 
 export default class {
   constructor(container, articleMethod, preloader) {
@@ -40,7 +40,7 @@ export default class {
   renderError() {
     this.preloader.innerHTML = '';
     this.preloader.insertAdjacentHTML('beforeend', `
-      <img class="preloader__image" src="${notFoundImage}" alt="not-found">
+      <img class="preloader__image" src="${notFound}" alt="not-found">
       <h2 class="preloader__title">Ничего не найдено</h2>
       <h3 class="preloader__text">К сожалению по вашему запросу ничего не найдено.</h3>
     `);
@@ -52,7 +52,7 @@ export default class {
 
   // eslint-disable-next-line no-unused-vars
   addCard(link, image, date, title, text, source, keyword, _id) {
-    this.cards.push({
+    const card = {
       link,
       image,
       date,
@@ -61,6 +61,7 @@ export default class {
       source,
       keyword,
       _id,
-    });
+    };
+    this.cards.push(card);
   }
 }

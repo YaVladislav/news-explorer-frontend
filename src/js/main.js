@@ -9,6 +9,8 @@ import NewsApi from './api/NewsApi';
 import Article from './components/Article';
 import ArticleList from './components/ArticleList';
 
+import checkNull from './utils/checkNull';
+
 (function () {
   // Buttons
   const headerButton = document.querySelector('.header__button');
@@ -102,6 +104,7 @@ import ArticleList from './components/ArticleList';
           articleList.renderLoader('inactive');
           articleList.cards = [];
           results.articles.forEach((articleCard) => {
+            checkNull(articleCard);
             articleList.addCard(
               articleCard.url,
               articleCard.urlToImage,
