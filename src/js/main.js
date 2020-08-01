@@ -18,7 +18,6 @@ import ArticleList from './components/ArticleList';
   // Api
   const api = new Api({
     baseUrl: 'https://api.jswa.online',
-    // baseUrl: 'http://localhost:3000',
     headers: {
       'Content-Type': 'application/json',
     },

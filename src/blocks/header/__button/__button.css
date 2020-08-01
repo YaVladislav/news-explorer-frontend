@@ -5,6 +5,7 @@
   box-sizing: border-box;
   background-color: transparent;
   padding: 0 12px;
+  color: inherit;
 }
 
 .header__button:hover {

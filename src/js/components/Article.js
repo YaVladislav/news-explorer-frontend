@@ -1,9 +1,10 @@
 import setDate from '../utils/formatDate';
 
 export default class {
-  constructor(pageKey, apiMethod) {
+  constructor(pageKey, apiMethod, contentTitles) {
     this.pageKey = pageKey;
     this.apiMethod = apiMethod;
+    this.titleMethod = contentTitles;
   }
 
   create(card) {
@@ -81,8 +82,11 @@ export default class {
             });
         } else {
           apiMethod.deleteArticle(card);
-          // eslint-disable-next-line no-unused-expressions
-          this.pageKey === 'articles' ? element.parentElement.remove() : icon.classList.remove('article__icon_marked');
+          if (this.pageKey === 'articles') {
+            element.parentElement.remove();
+          } else {
+            icon.classList.remove('article__icon_marked');
+          }
         }
       }
     });
