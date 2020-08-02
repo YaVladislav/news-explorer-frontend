@@ -1,6 +1,7 @@
 .article__icon {
   stroke: inherit;
   stroke-width: 2;
+  z-index: 2;
 }
 
 .article__icon_marked {

@@ -16,11 +16,11 @@
         <img class="header__menu-icon" src="<%= require('./images/menu/menu_dark.svg')%>" alt="Menu">
       </button>
       <nav class="navigation navigation_header">
-        <ul class="navigation__menu">
+        <ul class="navigation__menu navigation__menu_header">
           <li class="navigation__item">
             <a class="link" href="./index.html">Главная</a>
           </li>
-          <li class="navigation__item navigation__item_active">
+          <li class="navigation__item navigation__item_secondary navigation__item_active">
             <a class="link" href="./articles.html">Сохраненные статьи</a>
           </li>
           <li class="navigation__item">
@@ -37,100 +37,13 @@
     <!--MAIN-->
     <main class="content">
       <!--SECTION ARTICLES-->
-      <!--В 3 части диплома планируется подгрузка спрайтов SVG через JS-->
       <section class="articles">
         <h2 class="page__title">Сохранённые статьи</h2>
-        <h3 class="content__title">Грета, у вас 5 сохранённых статей</h3>
+        <h3 class="content__title"></h3>
         <div class="articles__keys">
-          <p class="content__subtitle">
-            По ключевым словам:
-            <span class="articles__key">Природа, Тайга</span>
-            и
-            <span class="articles__key">2 другим</span>
-          </p>
+          <p class="content__subtitle"></p>
         </div>
         <div class="articles__grid">
-          <!--ARTICLE-->
-          <div class="article">
-            <img class="article__image" src="<%= require('./images/article/__images/image_01.jpg')%>" alt="article-image">
-            <time class="article__data" datetime="2019-08-02">2 августа, 2019</time>
-            <h3 class="article__title">Национальное достояние – парки</h3>
-            <p class="article__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
-            <span class="article__source">Лента.ру</span>
-            <button class="article__button article__button_trash">
-              <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M15 3H9V5H3V7H21V5H15V3ZM5 9V20C5 21.1046 5.89543 22 7 22H17C18.1046 22 19 21.1046 19 20V9H17V20H7V9H5ZM9 9L9 18H11L11 9H9ZM13 9V18H15V9H13Z" />
-              </svg>
-            </button>
-            <div class="article__keys">
-              <span class="article__key">Природа</span>
-            </div>
-          </div>
-          <!--ARTICLE-->
-          <div class="article">
-            <img class="article__image" src="<%= require('./images/article/__images/image_06.jpg')%>" alt="article-image">
-            <time class="article__data" datetime="2019-08-02">2 августа, 2019</time>
-            <h3 class="article__title">Лесные огоньки: история одной фотографии</h3>
-            <p class="article__text">Фотограф отвлеклась от освещения суровой политической реальности Мексики.</p>
-            <span class="article__source">Медуза</span>
-            <button class="article__button article__button_trash">
-              <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M15 3H9V5H3V7H21V5H15V3ZM5 9V20C5 21.1046 5.89543 22 7 22H17C18.1046 22 19 21.1046 19 20V9H17V20H7V9H5ZM9 9L9 18H11L11 9H9ZM13 9V18H15V9H13Z" />
-              </svg>
-            </button>
-            <div class="article__keys">
-              <span class="article__key">Природа</span>
-            </div>
-          </div>
-          <!--ARTICLE-->
-          <div class="article">
-            <img class="article__image" src="<%= require('./images/article/__images/image_05.jpg')%>" alt="article-image">
-            <time class="article__data" datetime="2019-08-02">2 августа, 2019</time>
-            <h3 class="article__title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h3>
-            <p class="article__text">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
-            <span class="article__source">Риа</span>
-            <button class="article__button article__button_trash">
-              <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M15 3H9V5H3V7H21V5H15V3ZM5 9V20C5 21.1046 5.89543 22 7 22H17C18.1046 22 19 21.1046 19 20V9H17V20H7V9H5ZM9 9L9 18H11L11 9H9ZM13 9V18H15V9H13Z" />
-              </svg>
-            </button>
-            <div class="article__keys">
-              <span class="article__key">Тайга</span>
-            </div>
-          </div>
-          <!--ARTICLE-->
-          <div class="article">
-            <img class="article__image" src="<%= require('./images/article/__images/image_01.jpg')%>" alt="article-image">
-            <time class="article__data" datetime="2019-08-02">2 августа, 2019</time>
-            <h3 class="article__title">Национальное достояние – парки</h3>
-            <p class="article__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
-            <span class="article__source">Лента.ру</span>
-            <button class="article__button article__button_trash">
-              <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M15 3H9V5H3V7H21V5H15V3ZM5 9V20C5 21.1046 5.89543 22 7 22H17C18.1046 22 19 21.1046 19 20V9H17V20H7V9H5ZM9 9L9 18H11L11 9H9ZM13 9V18H15V9H13Z" />
-              </svg>
-            </button>
-            <div class="article__keys">
-              <span class="article__key">Парки</span>
-            </div>
-          </div>
-          <!--ARTICLE-->
-          <div class="article">
-            <img class="article__image" src="<%= require('./images/article/__images/image_06.jpg')%>" alt="article-image">
-            <time class="article__data" datetime="2019-08-02">2 августа, 2019</time>
-            <h3 class="article__title">Лесные огоньки: история одной фотографии</h3>
-            <p class="article__text">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного
-              из местных чудес природы.</p>
-            <span class="article__source">Медуза</span>
-            <button class="article__button article__button_trash">
-              <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M15 3H9V5H3V7H21V5H15V3ZM5 9V20C5 21.1046 5.89543 22 7 22H17C18.1046 22 19 21.1046 19 20V9H17V20H7V9H5ZM9 9L9 18H11L11 9H9ZM13 9V18H15V9H13Z" />
-              </svg>
-            </button>
-            <div class="article__keys">
-              <span class="article__key">Фотография</span>
-            </div>
-          </div>
         </div>
       </section>
     </main>

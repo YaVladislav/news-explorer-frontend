@@ -6,6 +6,11 @@
 .articles {
   padding: 0 104px;
   color: #1A1B22;
+  display: none;
+}
+
+.articles_active {
+  display: block;
 }
 
 @media screen and (max-width: 960px) {

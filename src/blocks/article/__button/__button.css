@@ -13,6 +13,7 @@
   cursor: pointer;
   background: #fff;
   stroke: #B6BCBF;
+  z-index: 1;
 }
 
 .article__button_flag:hover {

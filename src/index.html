@@ -16,20 +16,15 @@
         <img class="header__menu-icon" src="<%= require('./images/menu/menu.svg')%>" alt="Menu">
       </button>
       <nav class="navigation navigation_header">
-        <ul class="navigation__menu">
+        <ul class="navigation__menu navigation__menu_header">
           <li class="navigation__item navigation__item_active">
             <a class="link link_medium" href="./index.html">Главная</a>
           </li>
-          <li class="navigation__item">
+          <li class="navigation__item navigation__item_secondary">
             <a class="link link_medium" href="./articles.html">Сохраненные статьи</a>
           </li>
           <li class="navigation__item">
-            <button class="button header__button">
-              Авторизоваться
-              <svg class="button__image button__image_active" width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path d="M10 6L6 6L6 18H10V20H6C4.89543 20 4 19.1046 4 18V6C4 4.89543 4.89543 4 6 4H10V6ZM17.5856 13L13.2927 17.1339L14.707 18.4958L21.4141 12.0371L14.707 5.57837L13.2927 6.9402L17.5856 11.0741H8V13H17.5856Z" />
-              </svg>
-            </button >
+            <button class="button header__button"></button >
           </li>
         </ul>
       </nav>
@@ -41,7 +36,7 @@
         <h2 class="search__title">Что в мире творится?</h2>
         <h3 class="search__subtitle">Находите самые свежие статьи на любую тему и сохраняйте в своём личном кабинете.</h3>
         <form class="search__form">
-          <input class="search__input" type="text" placeholder="Введите тему новости" minlength="3" name="search" required>
+          <input class="search__input" type="text" placeholder="Введите тему новости" minlength="3" name="keyword" required>
           <button class="button search__button" type="submit">
             Искать
           </button>
@@ -49,60 +44,11 @@
       </section>
       <!--SECTION PRELOADER (модификатор класса _active делает preloader видимым)-->
       <section class="preloader">
-        <i class="preloader__circle"></i>
-        <h2 class="preloader__text">Идет поиск новостей...</h2>
-      </section>
-      <!--SECTION PRELOADER-RESULT (модификатор класса _active делает preloader видимым)-->
-      <section class="preloader">
-        <img class="preloader__image" src="<%= require('./images/preloader/not-found.svg')%>" alt="not-found">
-        <h3 class="preloader__title">Ничего не найдено</h3>
-        <p class="preloader__text">К сожалению по вашему запросу ничего не найдено.</p>
       </section>
       <!--SECTION ARTICLES-->
-      <!--В 3 части диплома планируется подгрузка спрайтов SVG через JS-->
       <section class="articles">
         <h2 class="content__title">Результаты поиска</h2>
         <div class="articles__grid">
-          <!--ARTICLE-->
-          <div class="article">
-            <img  class="article__image" src="<%= require('./images/article/__images/image_08.jpg')%>" alt="article-image">
-            <time class="article__data" datetime="2019-08-02">2 августа, 2019</time>
-            <h3 class="article__title">Национальное достояние – парки</h3>
-            <p class="article__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
-            <span class="article__source">Лента.ру</span>
-            <button class="article__button article__button_flag">
-              <svg class="article__icon article__icon_marked" width="14px" height="19px" viewBox="0 0 14 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M6.38218 12.7137L1 16.9425V1L13 1V16.9425L7.61782 12.7137L7 12.2283L6.38218 12.7137Z" />
-              </svg>
-            </button>
-          </div>
-          <!--ARTICLE-->
-          <div class="article">
-            <img class="article__image" src="<%= require('./images/article/__images/image_04.jpg')%>" alt="article-image">
-            <time class="article__data" datetime="2019-08-02">2 августа, 2019</time>
-            <h3 class="article__title">Лесные огоньки: история одной фотографии</h3>
-            <p class="article__text">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного
-              из местных чудес природы.</p>
-            <span class="article__source">Медуза</span>
-            <button class="article__button article__button_flag">
-              <svg class="article__icon" width="14px" height="19px" viewBox="0 0 14 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M6.38218 12.7137L1 16.9425V1L13 1V16.9425L7.61782 12.7137L7 12.2283L6.38218 12.7137Z" />
-              </svg>
-            </button>
-          </div>
-          <!--ARTICLE-->
-          <div class="article">
-            <img class="article__image" src="<%= require('./images/article/__images/image_07.jpg')%>" alt="article-image">
-            <time class="article__data" datetime="2019-08-02">2 августа, 2019</time>
-            <h3 class="article__title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h3>
-            <p class="article__text">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
-            <span class="article__source">Риа</span>
-            <button class="article__button article__button_flag">
-              <svg class="article__icon" width="14px" height="19px" viewBox="0 0 14 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M6.38218 12.7137L1 16.9425V1L13 1V16.9425L7.61782 12.7137L7 12.2283L6.38218 12.7137Z" />
-              </svg>
-            </button>
-          </div>
         </div>
         <button class="button articles__button">
           Показать еще
@@ -110,17 +56,23 @@
       </section>
       <!--SECTION ABOUT-->
       <section class="about">
-        <picture class="about__avatar">
+        <picture>
           <source srcset="<%= require('./images/about/__avatar/avatar-small.jpg')%>" media="(max-width: 960px)">
-          <img src="<%= require('./images/about/__avatar/avatar.jpg')%>" alt="avatar">
+          <img class="about__avatar" src="<%= require('./images/about/__avatar/avatar.jpg')%>" alt="avatar">
         </picture>
         <div class="about__container">
           <h2 class="content__title">Об авторе</h2>
           <p class="about__author">
-            Это блок с описанием автора проекта. Здесь следует указать, как вас зовут, чем вы занимаетесь, какими технологиями разработки владеете.
+            Меня зовут Владислав. По образованию инженер ПГС. Владею популярными программами для проектирования и расчетов в строительной области.
           </p>
           <p class="about__author">
-            Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь потенциальным заказчикам.
+            Еще до Я.Практикума поверхностно владел версткой, HTML, PHP, контекстной рекламой и слышал о JavaScript... :)
+          </p>
+          <p class="about__author">
+            Теперь же, вместе с Я.Практикумом, мне приоткрылся этот мир веб разработки. И теперь я точно знаю что такое JavaScript и с чем его едят!
+          </p>
+          <p class="about__author">
+            Но впереди еще долгий путь к знаниям... век живи, век учись.
           </p>
         </div>
       </section>
@@ -148,78 +100,63 @@
       </nav>
     </footer>
     <!--POPUP SIGNIN модификатор класса _is-opened делает попап видимым-->
-    <div class="popup">
+    <div class="popup popup_signin">
       <div class="popup__content">
-        <img class="popup__close" src="<%= require('./images/popup/close.svg')%>" alt="Close">
+        <svg class="popup__close" width="40" height="40" viewBox="0 0 40 40"  xmlns="http://www.w3.org/2000/svg">
+          <path d="M22.3566 20L31.1781 28.8215L28.8211 31.1786L18.3497 20.7072C17.9592 20.3166 17.9592 19.6835 18.3497 19.2929L28.8211 8.82153L31.1781 11.1786L22.3566 20Z" />
+          <path d="M18.1307 20L9.30919 28.8215L11.6662 31.1786L22.1376 20.7072C22.5281 20.3166 22.5281 19.6835 22.1376 19.2929L11.6662 8.82153L9.30919 11.1786L18.1307 20Z" />
+        </svg>
         <h3 class="popup__title">Вход</h3>
-        <form class="popup__form" name="new">
+        <form class="popup__form popup__form_signin" name="signin">
           <div class="popup__input-field">
-            <label class="popup__label">
-              Email
-              <input class="popup__input" type="email" name="email" placeholder="Введите email" required>
-            </label>
-            <span class="popup__error popup__error_active">Неправильный формат email</span>
+            <label class="popup__label" for="email">Email</label>
+            <input class="popup__input" id="email" type="email" name="email" placeholder="Введите email" required>
+            <span class="popup__error"></span>
           </div>
           <div class="popup__input-field">
-            <label class="popup__label">
-              Пароль
-              <input class="popup__input" type="password" name="password" minlength="8" placeholder="Введите пароль" required>
-            </label>
+            <label class="popup__label" for="password">Пароль</label>
+            <input class="popup__input" id="password" type="password" name="password" minlength="8" placeholder="Введите пароль" required>
+            <span class="popup__error"></span>
           </div>
-          <span class="popup__error popup__error_button popup__error_active">Неправильное имя или пароль</span>
-          <button type="submit" class="button popup__button">
-            Войти
-          </button>
-          <p class="popup__checkout-text">
-            или
-            <button class="popup__checkout">Зарегистрироваться</button>
-          </p>
+          <span class="error"></span>
+          <button type="submit" class="button popup__button" disabled>Войти</button>
         </form>
+        <p class="popup__checkout-text">
+          или
+          <button class="popup__checkout">Зарегистрироваться</button>
+        </p>
       </div>
     </div>
     <!--POPUP SIGNUP модификатор класса _is-opened делает попап видимым-->
-    <div class="popup">
+    <div class="popup popup_signup">
       <div class="popup__content">
-        <img class="popup__close" src="<%= require('./images/popup/close.svg')%>" alt="Close">
+        <svg class="popup__close" width="40" height="40" viewBox="0 0 40 40"  xmlns="http://www.w3.org/2000/svg">
+          <path d="M22.3566 20L31.1781 28.8215L28.8211 31.1786L18.3497 20.7072C17.9592 20.3166 17.9592 19.6835 18.3497 19.2929L28.8211 8.82153L31.1781 11.1786L22.3566 20Z" />
+          <path d="M18.1307 20L9.30919 28.8215L11.6662 31.1786L22.1376 20.7072C22.5281 20.3166 22.5281 19.6835 22.1376 19.2929L11.6662 8.82153L9.30919 11.1786L18.1307 20Z" />
+        </svg>
         <h3 class="popup__title">Регистрация</h3>
-        <form class="popup__form" name="new">
+        <form class="popup__form popup__form_signup" name="signup">
           <div class="popup__input-field">
-            <label class="popup__label">
-              Email
-              <input class="popup__input" type="email" name="email" placeholder="Введите email" required>
-            </label>
-            <span class="popup__error popup__error_active">Неправильный формат email</span>
+            <label class="popup__label" for="email">Email</label>
+            <input class="popup__input" id="email" type="email" name="email" placeholder="Введите email" required>
+            <span class="popup__error"></span>
           </div>
           <div class="popup__input-field">
-            <label class="popup__label">
-              Пароль
-              <input class="popup__input" type="password" name="password" minlength="8" placeholder="Введите пароль" required>
-            </label>
+            <label class="popup__label" for="password">Пароль</label>
+            <input class="popup__input" id="password" type="password" name="password" minlength="8" placeholder="Введите пароль" required>
+            <span class="popup__error"></span>
           </div>
           <div class="popup__input-field">
-            <label class="popup__label">
-              Имя
-              <input class="popup__input" type="text" name="name" minlength="2" maxlength="20" placeholder="Введите пароль" required>
-            </label>
+            <label class="popup__label" for="name">Имя</label>
+            <input class="popup__input" id="name" type="text" name="name" minlength="2" maxlength="20" placeholder="Введите имя" required>
+            <span class="popup__error"></span>
           </div>
-          <span class="popup__error popup__error_button popup__error_active">Такой пользователь уже существует</span>
-          <button type="submit" class="button popup__button">
-            Зарегистрироваться
-          </button>
-          <p class="popup__checkout-text">
-            или
-            <button class="popup__checkout">Войти</button>
-          </p>
+          <span class="error"></span>
+          <button type="submit" class="button popup__button" disabled>Зарегистрироваться</button>
         </form>
-      </div>
-    </div>
-    <!--POPUP SUCCES модификатор класса _is-opened делает попап видимым-->
-    <div class="popup">
-      <div class="popup__content">
-        <img class="popup__close" src="<%= require('./images/popup/close.svg')%>" alt="Close">
-        <h3 class="popup__title">Пользователь успешно зарегистрирован!</h3>
-        <p class="popup__checkout-text popup__checkout-text_success">
-          <button class="popup__checkout">Выполнить вход</button>
+        <p class="popup__checkout-text">
+          или
+          <button class="popup__checkout">Войти</button>
         </p>
       </div>
     </div>

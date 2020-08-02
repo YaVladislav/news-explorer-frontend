@@ -5,6 +5,7 @@
   box-sizing: border-box;
   background-color: transparent;
   padding: 0 12px;
+  color: inherit;
 }
 
 .header__button:hover {
@@ -12,9 +13,12 @@
   opacity: 0.8;
 }
 
-@media screen and (max-width: 730px) {
+@media screen and (max-width: 760px) {
   .header__button {
-    width: calc(100vw - 16px * 2);
+    display: flex;
+    justify-content: center;
+    width: 100%;
     margin-left: 0;
+    margin-bottom: 0;
   }
 }
