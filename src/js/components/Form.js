@@ -1,5 +1,5 @@
 /* eslint-disable no-param-reassign */
-export default class {
+export default class Form {
   constructor(api) {
     this.api = api;
   }

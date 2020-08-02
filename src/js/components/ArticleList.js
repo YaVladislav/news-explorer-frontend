@@ -1,6 +1,6 @@
 import notFound from '../../images/preloader/not-found.svg';
 
-export default class {
+export default class ArticleList {
   constructor(container, articleMethod, preloader, articlesButton) {
     this.container = container;
     this.preloader = preloader;

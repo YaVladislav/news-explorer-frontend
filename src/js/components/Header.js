@@ -1,4 +1,4 @@
-export default class {
+export default class Header {
   constructor(header, pageKey) {
     this.header = header;
     this.pageKey = pageKey;

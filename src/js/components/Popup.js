@@ -1,4 +1,4 @@
-export default class {
+export default class Popup {
   constructor(popup) {
     this.popup = popup;
     this.setEventListener();

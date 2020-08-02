@@ -1,6 +1,6 @@
 import setDate from '../utils/setTodayDate';
 
-export default class {
+export default class NewsApi {
   constructor(option) {
     this.baseUrl = option.baseUrl;
     this.headers = option.headers;

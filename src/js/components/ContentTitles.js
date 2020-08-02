@@ -1,6 +1,6 @@
 import sortArr from '../utils/sortArr';
 
-export default class {
+export default class ContentTitles {
   constructor(container) {
     this.container = container;
   }

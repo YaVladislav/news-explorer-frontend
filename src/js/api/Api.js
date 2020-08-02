@@ -1,6 +1,6 @@
 import responseHandler from '../utils/responseHandler';
 
-export default class {
+export default class Api {
   constructor(option) {
     this.baseUrl = option.baseUrl;
     this.headers = option.headers;

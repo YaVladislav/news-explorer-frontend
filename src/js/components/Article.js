@@ -1,6 +1,6 @@
 import setDate from '../utils/formatDate';
 
-export default class {
+export default class Article {
   constructor(pageKey, apiMethod, contentTitles) {
     this.pageKey = pageKey;
     this.apiMethod = apiMethod;
