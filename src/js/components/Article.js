@@ -1,4 +1,5 @@
 import setDate from '../utils/formatDate';
+import sanitizeHTML from '../utils/sanitizeHTML';
 
 export default class Article {
   constructor(pageKey, apiMethod, contentTitles) {
@@ -14,12 +15,12 @@ export default class Article {
     const article = document.createElement('div');
     article.className = 'article';
     article.insertAdjacentHTML('beforeend', `
-      <a class="article__link" href="${card.link}" target="_blank">
-        <img  class="article__image" src="${card.image}" alt="article-image">
-        <time class="article__data" datetime="${card.date}">${setDate(card.date)}</time>
-        <h2 class="article__title">${card.title}</h2>
-        <p class="article__text">${card.text}</p>
-        <span class="article__source">${card.source}</span>
+      <a class="article__link" href="${sanitizeHTML(card.link)}" target="_blank">
+        <img  class="article__image" src="${sanitizeHTML(card.image)}" alt="article-image">
+        <time class="article__data" datetime="${sanitizeHTML(card.date)}">${setDate(card.date)}</time>
+        <h2 class="article__title">${sanitizeHTML(card.title)}</h2>
+        <p class="article__text">${sanitizeHTML(card.text)}</p>
+        <span class="article__source">${sanitizeHTML(card.source)}</span>
       </a>
     `);
     article.append(this.renderIcon(card));
@@ -31,7 +32,7 @@ export default class Article {
     const keywords = document.createElement('div');
     keywords.className = 'article__keys';
     keywords.insertAdjacentHTML('beforeend', `
-      <span class="article__key">${card.keyword}</span>
+      <span class="article__key">${sanitizeHTML(card.keyword)}</span>
     `);
     return keywords;
   }
