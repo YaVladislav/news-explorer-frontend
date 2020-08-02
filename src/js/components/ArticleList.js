@@ -1,10 +1,11 @@
 import notFound from '../../images/preloader/not-found.svg';
 
 export default class {
-  constructor(container, articleMethod, preloader) {
+  constructor(container, articleMethod, preloader, articlesButton) {
     this.container = container;
     this.preloader = preloader;
     this.articleMethod = articleMethod;
+    this.showMoreButton = articlesButton;
   }
 
   renderResults() {
@@ -12,10 +13,13 @@ export default class {
       container,
       articleMethod,
       cards,
+      showMoreButton,
+      _renderButton,
     } = this;
     container.parentElement.classList.add('articles_active');
     const cardsQuantity = container.childElementCount;
     for (let i = cardsQuantity; i <= cardsQuantity + 2; i += 1) {
+      if (showMoreButton) _renderButton(showMoreButton, cards.length, i);
       const article = articleMethod.create(cards[i]);
       if (!article) {
         return;
@@ -63,5 +67,10 @@ export default class {
       _id,
     };
     this.cards.push(card);
+  }
+
+  _renderButton(showMoreButton, allCardsQuantity, showCardsQuantity) {
+    // eslint-disable-next-line no-param-reassign
+    showMoreButton.hidden = (showCardsQuantity < allCardsQuantity) ? 0 : 1;
   }
 }

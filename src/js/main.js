@@ -43,8 +43,7 @@ import checkNull from './utils/checkNull';
   // Article
   const article = new Article('index', api);
   const articleContainer = document.querySelector('.articles__grid');
-  const articleList = new ArticleList(articleContainer, article, preloader);
-
+  const articleList = new ArticleList(articleContainer, article, preloader, articlesButton);
   // Events
   buttonMenu.addEventListener('click', () => {
     navigationMenu.classList.toggle('navigation__menu_open');
